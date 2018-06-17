@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { searchFood } from '../actions/index';
 
+import '../style/components/homepage.scss';
+
 class HomePage extends Component {
     constructor(props) {
         super(props);

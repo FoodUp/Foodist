@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import {
   BrowserRouter as Router,
   Route,
@@ -13,6 +12,7 @@ import ShoppingListPage from './components/shoppingList_page';
 import HomePage from './components/home_page';
 import SearchResultPage from './components/searchResult_page';
 
+import './style/tool/all.scss';
 
 
 class App extends Component {
