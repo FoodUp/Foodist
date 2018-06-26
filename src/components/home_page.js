@@ -17,10 +17,19 @@ class HomePage extends Component {
     }
     render(){
         return(
-            <form onSubmit={this.handleSubmit.bind(this)}>
-                <input ref = {this.inputRef} />
-                <Link to="/shoppinglist">Go to shopping list </Link>
-            </form>
+            <div>
+                 <div className ="SearchContainer">
+                    <h1>Foodist</h1>
+                    <h2>Stunning Food, Simple Recipe </h2>
+                    <form onSubmit={this.handleSubmit.bind(this)}>
+                        <input ref = {this.inputRef} />
+                        <Link to="/shoppinglist">Go to shopping list </Link>
+                    </form>
+                </div>
+                <div className ="CollectionContainer">
+                    <ul></ul>
+                </div>
+            </div>
         )
     }
 }
