@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { searchFood } from '../actions/index';
+import style from '../App.css';
 
 class HomePage extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class HomePage extends Component {
     }
     render(){
         return(
-            <form onSubmit={this.handleSubmit.bind(this)}>
+            <form onSubmit={this.handleSubmit.bind(this)} className={style.App}>
                 <input ref = {this.inputRef} />
                 <Link to="/shoppinglist">Go to shopping list </Link>
             </form>
