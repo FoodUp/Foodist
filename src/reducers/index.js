@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { SEARCH_FOOD } from '../actions';
+import { SEARCH_ITEM } from '../actions';
 
 const activeItemReducer = (state = '', action)=>{
     switch(action.type){
@@ -15,8 +15,8 @@ const itemListReducer = (state = {}, action)=>{
 
 const searchTermReducer = (state = '', action)=>{
     switch(action.type){
-        case SEARCH_FOOD : 
-            console.log(action);
+        case SEARCH_ITEM : 
+            console.log(action.term);
             return action.term;
         default : return state;
     }

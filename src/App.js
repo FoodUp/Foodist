@@ -8,9 +8,9 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import rootReducer from './reducers/';
-import ShoppingListPage from './components/shoppingList_page';
-import HomePage from './components/home_page';
-import SearchResultPage from './components/searchResult_page';
+import ShoppingListPage from './components/shoppingList';
+import HomePage from './components/home';
+import SearchResultPage from './components/searchResult';
 
 
 

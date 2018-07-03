@@ -1,8 +1,8 @@
-export const SEARCH_FOOD = 'search_food';
+export const SEARCH_ITEM = 'search_item';
 
-export function searchFood(searchTerm){
+export function searchItem(searchTerm){
     return {
-        type: SEARCH_FOOD,
+        type: SEARCH_ITEM,
         term: searchTerm
     }
 }
