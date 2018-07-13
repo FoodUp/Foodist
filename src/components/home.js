@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import style from '../App.css';
+import style from '../style/App.css';
 
 import SearchBar from './searchBar';
 import ItemList from './itemList';

@@ -1,3 +1,6 @@
+import './style/normalize.css';
+import './style/global.css';
+
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
