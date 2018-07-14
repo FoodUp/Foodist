@@ -1,0 +1,28 @@
+.nav{
+    display: flex;
+    padding: 1em 1.5em;
+}
+.nav>div,a{
+    margin: 0 .5em;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+@value primary, sliver from "../shared/varaible.css";
+
+.logo{
+    composes: logo from '../shared/icon.css';
+    font-size: 2.5em;
+    color: primary;
+}
+.chef{
+    composes: chef from '../shared/icon.css';
+    font-size: 2em;
+    color: sliver;
+}
+.list{
+    text-decoration: none;
+    composes: list from '../shared/icon.css';
+    font-size: 2em;
+    color: sliver;
+}

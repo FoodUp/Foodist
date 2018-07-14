@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { searchItem } from '../actions';
 import { bindActionCreators } from 'redux';
+import { search, cross } from '../style/shared/icon.css';
+import { d0 } from '../style/components/searchBar.css';
 //container component
 class SearchBar extends Component{
     constructor(props) {
@@ -24,11 +26,10 @@ class SearchBar extends Component{
     }
     render(){
         return (
-            <form onSubmit={this.handleSubmit} >
-                <button title= "Search Foodist" type="submit"></button>
-                <input type="text" value={this.state.term} onChange={this.handleChange.bind(this)} />
-                <button title="Clear" type="button"></button>
-            </form>
+            <form className={d0} onSubmit={this.handleSubmit}>
+                <button className={search}></button>
+                <input type="text" value={this.state.term} onChange={this.handleChange.bind(this)} placeholder="Search" />
+            </form>  
         )
     }
 }

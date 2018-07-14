@@ -1,5 +1,4 @@
-import './style/normalize.css';
-import './style/global.css';
+import './style/App.css';
 
 import React, { Component } from 'react';
 import {
