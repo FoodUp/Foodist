@@ -1,0 +1,42 @@
+.search:before {
+  content: "\e900";
+}
+.list:before {
+  content: "\e901";
+}
+.logo:before {
+  content: "\e902";
+}
+.chef:before {
+  content: "\e903";
+}
+.search2:before {
+  content: "\e986";
+}
+.glass:before {
+  content: "\e9a0";
+}
+.glass2:before {
+  content: "\e9a1";
+}
+.mug:before {
+  content: "\e9a2";
+}
+.spoon-knife:before {
+  content: "\e9a3";
+}
+.clipboard:before {
+  content: "\e9b8";
+}
+.list-numbered:before {
+  content: "\e9b9";
+}
+.list2:before {
+  content: "\e9ba";
+}
+.list22:before {
+  content: "\e9bb";
+}
+.cross:before {
+  content: "\ea0f";
+}

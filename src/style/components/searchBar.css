@@ -1,0 +1,25 @@
+@value cloud,sliver from "../shared/varaible.css";
+.d0{
+    width: 100%;
+    border-radius: 1em;
+    height: 2.5em;
+    display: flex;
+    background: cloud;
+    border: 1px solid cloud;
+}
+.d0:focus-within {
+    background-color: #fff;
+    border: 1px solid sliver;
+}
+.d0 button{
+    background: transparent;
+    border: 0; 
+    outline: 0;
+    font-size: 1.5em;
+}
+.d0 input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    width: 100%;
+}
