@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './searchBar';
 import ItemList from './itemList';
+
 //global style
 import '../style/App.css';
 // explict style

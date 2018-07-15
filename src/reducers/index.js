@@ -14,7 +14,7 @@ const recipeItems = [
             "tropical"
         ],
         "type": "dessert",
-        "image" : "",
+        "image" : "1.jpg",
         "tool": [
             {
                 "name": "Glass Box",
@@ -80,7 +80,7 @@ const recipeItems = [
             "vegan"
         ],
         "type": "main course",
-        "image" : ""
+        "image" : "2.jpg"
     },
     {
         "name": "Fresh Mix",
@@ -94,10 +94,10 @@ const recipeItems = [
             "green"
         ],
         "type": "Salad",
-        "image" : "",
+        "image" : "3.jpg",
     },
     {
-        "name": "Coco Mango Cube",
+        "name": "Coco Mango Cube2",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
         "time": {
@@ -108,9 +108,10 @@ const recipeItems = [
             "tropical"
         ],
         "type": "dessert",
-        "image" : ""
+        "image" : "4.jpg"
     }
 ];
+
 const activeItemReducer = (state = '', action)=>{
     switch(action.type){
         default : return state;
@@ -134,7 +135,7 @@ const searchTermReducer = (state = '', action)=>{
 
 const rootReducer = combineReducers({
     activeItem : activeItemReducer,
-    itemList   : itemListReducer,
+    items      : itemListReducer,
     searchTerm : searchTermReducer
 })
 
