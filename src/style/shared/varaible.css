@@ -3,3 +3,8 @@
 @value grey: #979797;
 @value sliver: #bdc3c7;
 @value dark: #2c3e50;
+
+ /* Smartphones (portrait) ----------- */
+@value mobile: only screen and (max-width : 767px) ;
+@value tablet: only screen and (min-width : 768px) and (max-width : 1023px);
+@value desktop: only screen and (min-width: 1024px);
