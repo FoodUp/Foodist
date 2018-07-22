@@ -8,7 +8,10 @@ const ItemList = (props) =>{
         //const pathToImg = require.context("./image/recipes/", true);
         return (
             <li key={id} > 
-                <img height="300" width="400" src={ `/image/recipes/${item.image}` } alt=""/>{item.name} 
+                <div>
+                    <img height="300" width="400" src={ `/image/recipes/${item.image}` } alt=""/>
+                </div>
+                <span>{item.name}</span>
             </li>
         );
     });

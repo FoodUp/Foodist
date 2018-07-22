@@ -2,7 +2,7 @@
 .d0{
     width: 100%;
     border-radius: 1em;
-    height: 2.5em;
+    height: 40px;
     display: flex;
     background: cloud;
     border: 1px solid cloud;

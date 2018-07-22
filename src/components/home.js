@@ -7,7 +7,7 @@ import ItemList from './itemList';
 import '../style/App.css';
 // explict style
 import { nav, logo, chef, list } from '../style/components/header.css';
-
+import { container } from '../style/shared/common.css';
 const Home = (props) => {
     return (
         <div>
@@ -19,7 +19,9 @@ const Home = (props) => {
                     <div className={ chef }></div>                    
                 </nav>
             </header>
-            <ItemList />
+            <div className={container}>
+                <ItemList />
+            </div>
         </div>
     );
 }

@@ -1,4 +1,4 @@
  /* all the global style */
 @import './shared/font.css';
 @import './shared/normalize.css';
-@import './shared/typography.css';
+@import './shared/common.css';
