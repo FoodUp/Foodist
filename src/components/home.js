@@ -19,7 +19,7 @@ const Home = (props) => {
                     <div className={ chef }></div>                    
                 </nav>
             </header>
-            <div className={container}>
+            <div className="container">
                 <ItemList />
             </div>
         </div>

@@ -12,17 +12,15 @@
 
 .logo{
     composes: logo from '../shared/icon.css';
-    font-size: 40px;
+    font-size: 36px;
     color: primary;
 }
 .chef{
     composes: chef from '../shared/icon.css';
-    font-size: 32px;
     color: sliver;
 }
 .list{
     text-decoration: none;
     composes: list from '../shared/icon.css';
-    font-size: 32px;
     color: sliver;
 }

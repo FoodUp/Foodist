@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="32px" height="48px" viewBox="0 0 32 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard 3</title>
+    <title>Combined Shape</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-3" fill="#000000">
+        <g id="Artboard-3" transform="translate(-14.000000, -6.000000)" fill="#000000">
             <path d="M20,25.5092581 L20,14 C20.0005714,10.6517857 24.3437518,6 29.7005885,6 L30.2999829,6 C35.6568196,6 39.9988572,10.6517857 39.9988572,14 L39.9988572,19.9371429 L39.9988572,25.5083421 C43.6573621,28.4405617 46,32.9467047 46,38 C46,46.836556 38.836556,54 30,54 C21.163444,54 14,46.836556 14,38 C14,32.9472308 16.3421501,28.4415001 20,25.5092581 Z M30,46 C34.418278,46 38,42.418278 38,38 C38,33.581722 34.418278,30 30,30 C25.581722,30 22,33.581722 22,38 C22,42.418278 25.581722,46 30,46 Z" id="Combined-Shape"></path>
         </g>
     </g>

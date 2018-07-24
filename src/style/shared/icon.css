@@ -1,14 +1,14 @@
-.search:before {
+.logo:before {
   content: "\e900";
 }
-.list:before {
-  content: "\e901";
-}
-.logo:before {
+.search:before {
   content: "\e902";
 }
-.chef:before {
+.list:before {
   content: "\e903";
+}
+.chef:before {
+  content: "\e901";
 }
 .search2:before {
   content: "\e986";
