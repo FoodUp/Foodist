@@ -1,13 +1,42 @@
-
 .r{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
 }
+@value mobile, tablet, desktop, cloud from "../shared/varaible.css";
 
-.r >div {
-    padding: 16px 8px;
+.card {
+    padding: 18px;
     box-sizing: border-box;
     align-self: auto;
-    width: 33.3%;
+    position: relative;
+}
+@media mobile {
+    .card {
+        width: 100%;
+    }
+}
+@media tablet {
+    .card {
+        width: 50%;
+    }
+}
+@media desktop {
+    .card {
+        width: 33.3%;
+    }
+}
+.itemImg{
+    border-radius: 4px;
+    padding-top : 33.3%;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.title{
+    position: absolute;
+    bottom: 20px;
+    padding: 10px;
+    color: cloud;
 }

@@ -1,7 +1,7 @@
 @value cloud,sliver from "../shared/varaible.css";
 .d0{
     width: 100%;
-    border-radius: 1em;
+    border-radius: 8px;
     height: 40px;
     display: flex;
     background: cloud;

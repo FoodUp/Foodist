@@ -1,25 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import { r } from '../style/components/itemList.css';
+import { r , card , itemImg, title } from '../style/components/itemList.css';
 
 const ItemList = (props) =>{
     const itemsList =  _.map(props.items, (item, id)=> {
         var itemStyle = {
-            paddingTop : "33.3%",
-            width: "100%",
-            height: "200px",
-            backgroundImage: `url(./image/recipes/${item.image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center"
+            backgroundImage: `url(./image/recipes/${item.image})`
           };
         //const pathToImg = require.context("./image/recipes/", true);
         return (
-            <div key={id} > 
-                <div>
-                    <div style={ itemStyle }></div>
+            <div key={id} className={ card }> 
+                <div className={ itemImg } style={ itemStyle }>
                 </div>
-                <span>{item.name}</span>
+                <div className ={ title }>{item.name}</div>                
             </div>
         );
     });

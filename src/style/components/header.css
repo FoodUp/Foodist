@@ -3,7 +3,7 @@
     padding: 16px 24px;
 }
 .nav>div,a{
-    margin: 0 8px;
+    margin: 0 16px;
     display: flex;
     align-items: center;
     flex: 1 1 auto;
