@@ -97,7 +97,7 @@ const recipeItems = [
         "image" : "3.jpg",
     },
     {
-        "name": "Coco Mango Cube2",
+        "name": "Laozao",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
         "time": {
@@ -109,6 +109,34 @@ const recipeItems = [
         ],
         "type": "dessert",
         "image" : "4.jpg"
+    },
+    {
+        "name": "Pasta",
+        "description" : "Refreshing dessert in summer day",
+        "person" : 1, 
+        "time": {
+            "amount" : "20",
+            "unit"   : "min"
+        },
+        "tag": [
+            "tropical"
+        ],
+        "type": "dessert",
+        "image" : "5.jpg"
+    },
+    {
+        "name": "Baozai Rice",
+        "description" : "Refreshing dessert in summer day",
+        "person" : 1, 
+        "time": {
+            "amount" : "20",
+            "unit"   : "min"
+        },
+        "tag": [
+            "tropical"
+        ],
+        "type": "dessert",
+        "image" : "6.jpg"
     }
 ];
 

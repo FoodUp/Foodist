@@ -3,7 +3,7 @@
     width: 100%;
     flex-wrap: wrap;
 }
-@value mobile, tablet, desktop, cloud from "../shared/varaible.css";
+@value mobile, tablet, desktop, deskTab, cloud from "../shared/varaible.css";
 
 .card {
     padding: 18px;
@@ -26,17 +26,49 @@
         width: 33.3%;
     }
 }
+.imgWrapper{
+    position: relative;
+    overflow: hidden;
+}
 .itemImg{
     border-radius: 4px;
-    padding-top : 33.3%;
+    padding-top : 70%;
     width: 100%;
-    height: 200px;
     background-size: cover;
     background-position: center;
 }
-.title{
-    position: absolute;
-    bottom: 20px;
-    padding: 10px;
-    color: cloud;
+@media deskTab{
+    .insideWrapper{
+        opacity: 0;
+        position: absolute;
+    }
+}
+.shadow {
+    composes: insideWrapper;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg,rgba(0,0,0,.2) 0,transparent 30%,transparent 70%,rgba(0,0,0,.3));
+}
+@media deskTab{
+    .title{
+        composes: insideWrapper;
+        bottom: 20px;
+        padding: 10px;
+        color: cloud;
+    }
+    .time{
+        composes: insideWrapper;
+        top: 20px;
+        padding: 10px;
+        color: cloud;
+    }
+    .card:hover .insideWrapper{
+        opacity: 1;
+    }
+    .card:hover .itemImg{
+        transform: scale(1.1);
+        ransition: .5s ease-out;
+    }
 }
