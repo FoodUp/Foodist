@@ -10,6 +10,9 @@
 .chef:before {
   content: "\e901";
 }
+.basket:before {
+  content: "\e904";
+}
 .search2:before {
   content: "\e986";
 }
