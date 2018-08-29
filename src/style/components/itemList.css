@@ -64,6 +64,13 @@
         padding: 10px;
         color: cloud;
     }
+    .addToBasket{
+        composes: insideWrapper;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        color: cloud;
+    }
     .card:hover .insideWrapper{
         opacity: 1;
     }
