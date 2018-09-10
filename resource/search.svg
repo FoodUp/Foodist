@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard</title>
+    <title>search icon</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" fill="#000000">
+        <g id="Artboard" transform="translate(-10.000000, -10.000000)" fill="#000000">
             <g id="search-icon" transform="translate(10.000000, 10.000000)">
                 <path d="M17.5,35 C7.83501688,35 -1.42108547e-14,27.1649831 -1.42108547e-14,17.5 C-1.42108547e-14,7.83501688 7.83501688,0 17.5,0 C27.1649831,0 35,7.83501688 35,17.5 C35,27.1649831 27.1649831,35 17.5,35 Z M17.5,29.1666667 C23.9433221,29.1666667 29.1666667,23.9433221 29.1666667,17.5 C29.1666667,11.0566779 23.9433221,5.83333333 17.5,5.83333333 C11.0566779,5.83333333 5.83333333,11.0566779 5.83333333,17.5 C5.83333333,23.9433221 11.0566779,29.1666667 17.5,29.1666667 Z" id="Combined-Shape"></path>
                 <rect id="Rectangle-3" transform="translate(34.315411, 34.212345) rotate(41.000000) translate(-34.315411, -34.212345) " x="29.0496915" y="31.7123451" width="10.5314393" height="5" rx="2.5"></rect>
