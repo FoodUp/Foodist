@@ -16,14 +16,14 @@ const ItemList = (props) =>{
                     <div className={ itemImg } style={ itemStyle }></div>
                     <div className={ shadow }></div>
                 </div>
-                <div className ={ title }>{item.name}</div>        
-                
-                <div className = { time }>
-                { item.time.amount } { item.time.unit }
-                </div>   
-                <div className ={ addToBasket }>
-                    <div className = { basket }></div>
-                </div>   
+                <div>
+                    <div className ={ title }>{item.name}</div>        
+                    <div className = { time }>{ item.time.amount } { item.time.unit }</div>   
+                    <div className ={ addToBasket }>
+                        <div className = { basket }></div>
+                    </div> 
+                </div>
+                  
             </div>
         );
     });

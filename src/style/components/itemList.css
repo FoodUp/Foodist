@@ -29,15 +29,15 @@
 .imgWrapper{
     position: relative;
     overflow: hidden;
+    border-radius: 4px;
 }
 .itemImg{
-    border-radius: 4px;
     padding-top : 70%;
     width: 100%;
     background-size: cover;
     background-position: center;
 }
-@media deskTab{
+@media desktop{
     .insideWrapper{
         opacity: 0;
         position: absolute;
@@ -51,7 +51,7 @@
     left: 0;
     background: linear-gradient(180deg,rgba(0,0,0,.2) 0,transparent 30%,transparent 70%,rgba(0,0,0,.3));
 }
-@media deskTab{
+@media desktop{
     .title{
         composes: insideWrapper;
         bottom: 20px;
@@ -69,13 +69,13 @@
         top: 20px;
         right: 20px;
         padding: 10px;
-        color: cloud;
+        color: #FFFFFF;
     }
     .card:hover .insideWrapper{
         opacity: 1;
     }
     .card:hover .itemImg{
         transform: scale(1.1);
-        ransition: .5s ease-out;
+        transition: .5s ease-out;
     }
 }
