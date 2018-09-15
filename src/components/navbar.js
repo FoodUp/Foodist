@@ -5,7 +5,6 @@ import SearchBar from './searchBar';
 import { nav, logo, chef, list } from '../style/components/header.css';
 
 const NavBar = (props) => {
-    console.log(props);
     return (
         <nav className={nav}>
             <div className={`${logo}` }></div>

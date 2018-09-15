@@ -21,8 +21,8 @@ class SearchBar extends Component{
     handleSubmit(event){
         event.preventDefault();
         if(this.state.term){
-            this.props.searchItem(this.state.term);
-            this.props.history.push(`search/${this.state.term}`);     
+            //this.props.searchItem(this.state.term);
+            this.props.history.push(`/search/${this.state.term}`);     
         }     
     }
     render(){
