@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { searchItem } from '../actions';
 import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router';
 import { search, cross } from '../style/shared/icon.css';
 import { d0 } from '../style/components/searchBar.css';
 //container component
@@ -44,4 +45,4 @@ const mapDispatchToProps = dispatch => {
     return bindActionCreators({ searchItem }, dispatch)
 };
 
-export default connect(mapStateToProp,mapDispatchToProps)(SearchBar);
+export default withRouter(connect(mapStateToProp,mapDispatchToProps)(SearchBar));
