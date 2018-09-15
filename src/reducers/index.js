@@ -140,11 +140,6 @@ const recipeItems = [
     }
 ];
 
-const activeItemReducer = (state = '', action)=>{
-    switch(action.type){
-        default : return state;
-    }
-};
 
 const itemListReducer = (state = recipeItems, action)=>{
     switch(action.type){
@@ -155,14 +150,12 @@ const itemListReducer = (state = recipeItems, action)=>{
 const searchTermReducer = (state = '', action)=>{
     switch(action.type){
         case SEARCH_ITEM : 
-            console.log(action.term);
             return action.term;
         default : return state;
     }
 };
 
 const rootReducer = combineReducers({
-    activeItem : activeItemReducer,
     items      : itemListReducer,
     searchTerm : searchTermReducer
 })
