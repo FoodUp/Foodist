@@ -6,9 +6,9 @@ import { basket } from '../style/shared/icon.css';
 
 const ItemsList = ({ items }) =>{
     const itemsList =  _.map(items, (item, id)=> {
-        var itemStyle = {
+        const itemStyle = {
             backgroundImage: `url(/image/recipes/${item.image})`
-          };
+        };
         //const pathToImg = require.context("./image/recipes/", true);
         return (
             
