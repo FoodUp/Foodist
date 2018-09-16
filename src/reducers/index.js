@@ -137,6 +137,20 @@ const recipeItems = {
         ],
         "type": "dessert",
         "image" : "6.jpg"
+    },
+    7:{
+        "name": "Avocado Banana Smoothie",
+        "description" : "Best smoothie ever, loaded with greens, healthy fats, and protein",
+        "person" : 2, 
+        "time": {
+            "amount" : "5",
+            "unit"   : "min"
+        },
+        "tag": [
+            "smoothie"
+        ],
+        "type": "breakfast",
+        "image" : "7.jpg"
     }
 };
 
