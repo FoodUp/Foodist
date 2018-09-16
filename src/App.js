@@ -12,7 +12,7 @@ import rootReducer from './reducers/';
 import ShoppingListPage from './components/shoppingList';
 import HomePage from './components/home';
 import SearchResultPage from './components/searchResult';
-
+import Recipe from './components/recipe';
 import NavBar from './components/navbar';
 
 
@@ -27,7 +27,8 @@ class App extends Component {
             </header>
             <Route exact path="/" component={ HomePage }/>
             <Route path="/shoppinglist" component={ ShoppingListPage }/>
-            <Route path="/search/:term" component={ SearchResultPage }/>      
+            <Route path="/search/:term" component={ SearchResultPage }/>
+            <Route path="/recipe/:id" component={ Recipe }/>      
           </div>
         </Router>
       </Provider>
