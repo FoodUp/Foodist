@@ -3,7 +3,8 @@ import './style/App.css';
 import React, { Component } from 'react';
 import { 
   BrowserRouter as Router,
-  Route 
+  Route,
+  Switch
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -14,7 +15,7 @@ import HomePage from './components/home';
 import SearchResultPage from './components/searchResult';
 import Recipe from './components/recipe';
 import NavBar from './components/navbar';
-
+import NoMatch from './components/nomatch';
 
 class App extends Component {
   render() {
@@ -25,10 +26,13 @@ class App extends Component {
             <header>
                 <NavBar/>
             </header>
-            <Route exact path="/" component={ HomePage }/>
-            <Route path="/shoppinglist" component={ ShoppingListPage }/>
-            <Route path="/search/:term" component={ SearchResultPage }/>
-            <Route path="/recipe/:id" component={ Recipe }/>      
+            <Switch> 
+              <Route exact path="/" component={ HomePage }/>
+              <Route path="/shoppinglist" component={ ShoppingListPage }/>
+              <Route path="/search/:term" component={ SearchResultPage }/>
+              <Route path="/recipe/:id" component={ Recipe }/> 
+              <Route component={NoMatch} />   
+            </Switch>  
           </div>
         </Router>
       </Provider>
