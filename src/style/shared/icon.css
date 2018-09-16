@@ -1,4 +1,6 @@
-
+.cross:before {
+  content: "\e905";
+}
 .basket:before {
   content: "\e900";
 }

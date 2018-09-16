@@ -2,7 +2,7 @@
     display: flex;
     padding: 16px 24px;
 }
-.nav>div,a{
+.nav>div,.nav>a{
     margin: 0 16px;
     display: flex;
     align-items: center;
