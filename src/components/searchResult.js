@@ -2,6 +2,7 @@ import React ,{ Component }  from 'react';
 import { connect } from 'react-redux';
 import { searchItem } from '../actions/index';
 import ItemsList from './itemsList';
+import _ from 'lodash';
 
 class SearchResultPage extends Component {
     componentDidMount(){
@@ -16,8 +17,8 @@ class SearchResultPage extends Component {
     }
 }
 
-function searchInArray(arr, term){
-    let filtered = arr.filter(function(element){
+function searchInObject(obj, term){
+    let filtered = _.pickBy(obj, function(element){
         //search by name anf type
         return element.name.toLowerCase().indexOf(term.toLowerCase())> -1 
             || element.type.toLowerCase().indexOf(term.toLowerCase())> -1 ;
@@ -27,7 +28,7 @@ function searchInArray(arr, term){
 
 function mapStateToProps(state, ownProps) {
     //TODO: transfer url param to meaningful search term , like 'sea-food' to 'sea food'
-    let searchResultItems = searchInArray(state.items, ownProps.match.params.term);
+    let searchResultItems = searchInObject(state.items, ownProps.match.params.term);
     return { 
         urlTerm: ownProps.match.params.term ,
         searchResultItems: searchResultItems

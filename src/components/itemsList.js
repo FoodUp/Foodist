@@ -12,7 +12,7 @@ const ItemsList = ({ items }) =>{
         //const pathToImg = require.context("./image/recipes/", true);
         return (
             
-                <div  className={ card }> 
+                <div className={ card } key = { id }> 
                     <Link to={`/recipe/${id}`} >  
                         <div className={ imgWrapper }>
                             <div className={ itemImg } style={ itemStyle }></div>

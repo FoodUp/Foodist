@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { SEARCH_ITEM } from '../actions';
 
-const recipeItems = [
-    {
+const recipeItems = {
+    1: {
         "name": "Coco Mango Cube",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
@@ -68,7 +68,7 @@ const recipeItems = [
     
         ]
     },
-    {
+    2: {
         "name": "Vegan burger",
         "description" : "Delicious healthy burger",
         "person" : 1, 
@@ -82,7 +82,7 @@ const recipeItems = [
         "type": "main course",
         "image" : "2.jpg"
     },
-    {
+    3: {
         "name": "Fresh Mix",
         "description" : "Refreshing quick salad after long tiring workday",
         "person" : 1, 
@@ -96,7 +96,7 @@ const recipeItems = [
         "type": "Salad",
         "image" : "3.jpg",
     },
-    {
+    4: {
         "name": "Laozao",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
@@ -110,7 +110,7 @@ const recipeItems = [
         "type": "dessert",
         "image" : "4.jpg"
     },
-    {
+    5: {
         "name": "Pasta",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
@@ -124,7 +124,7 @@ const recipeItems = [
         "type": "dessert",
         "image" : "5.jpg"
     },
-    {
+    6:{
         "name": "Baozai Rice",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
@@ -138,8 +138,7 @@ const recipeItems = [
         "type": "dessert",
         "image" : "6.jpg"
     }
-];
-
+};
 
 const itemsReducer = (state = recipeItems, action)=>{
     switch(action.type){
