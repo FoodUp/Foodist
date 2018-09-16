@@ -24,3 +24,6 @@
     composes: list from '../shared/icon.css';
     color: sliver;
 }
+.logoLink{
+    text-decoration: none;
+}

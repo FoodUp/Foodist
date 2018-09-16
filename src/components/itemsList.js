@@ -1,14 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import _ from 'lodash';
 
 import { r , card , itemImg, title, time, addToBasket, shadow, imgWrapper } from '../style/components/itemList.css';
 import { basket } from '../style/shared/icon.css';
 
-const ItemList = (props) =>{
-    const itemsList =  _.map(props.items, (item, id)=> {
+const ItemsList = ({ items }) =>{
+    const itemsList =  _.map(items, (item, id)=> {
         var itemStyle = {
-            backgroundImage: `url(./image/recipes/${item.image})`
+            backgroundImage: `url(/image/recipes/${item.image})`
           };
         //const pathToImg = require.context("./image/recipes/", true);
         return (
@@ -24,7 +23,6 @@ const ItemList = (props) =>{
                         <div className = { basket }></div>
                     </div> 
                 </div>
-                  
             </div>
         );
     });
@@ -34,7 +32,5 @@ const ItemList = (props) =>{
         </div>
     );
 }
-const mapStateToProp= state =>{
-    return {items: state.items}
-}
-export default connect(mapStateToProp)(ItemList);
+
+export default ItemsList;

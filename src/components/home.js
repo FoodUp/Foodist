@@ -1,11 +1,15 @@
 import React from 'react';
-import ItemList from './itemList';
+import ItemsList from './itemsList';
+import { connect } from 'react-redux';
+
+//container component
+const ItemsListContainer = connect((state)=>({items : state.items}))(ItemsList);
 
 const Home = (props) => {
     return (
         <div>
             <div className="container">
-                <ItemList />
+                <ItemsListContainer />
             </div>
         </div>
     );

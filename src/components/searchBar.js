@@ -11,9 +11,16 @@ class SearchBar extends Component{
         super(props);
         //Controlled Components : form element's value is maintained and updated with setState()
         //Uncontrolled Components : use ref to get forms values instead of writing event handler for each elements
-        this.state = { term : props.term }; 
+        this.state = { term : props.term };
+        this.textInput = React.createRef();
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    componentDidUpdate(prevProps) {
+        // Typical usage (don't forget to compare props):
+        if (this.props.term !== prevProps.term) {
+            this.setState({term: this.props.term} );
+        }
     }
     handleChange(event){
         this.setState({term : event.target.value});
@@ -22,6 +29,7 @@ class SearchBar extends Component{
         event.preventDefault();
         if(this.state.term){
             //this.props.searchItem(this.state.term);
+            this.textInput.current.blur();
             this.props.history.push(`/search/${this.state.term}`);     
         }     
     }
@@ -29,7 +37,7 @@ class SearchBar extends Component{
         return (
             <form className={d0} onSubmit={this.handleSubmit}>
                 <button className={search}></button>
-                <input type="text" value={this.state.term} onChange={this.handleChange.bind(this)} placeholder="Search" />
+                <input ref= {this.textInput} type="text" value={this.state.term} onChange={this.handleChange.bind(this)} placeholder="Search" />
             </form>  
         )
     }

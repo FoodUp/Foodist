@@ -3,11 +3,10 @@ import './style/App.css';
 import React, { Component } from 'react';
 import { 
   BrowserRouter as Router,
-   Route 
+  Route 
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import createBrowserHistory from 'history/createBrowserHistory';
 
 import rootReducer from './reducers/';
 import ShoppingListPage from './components/shoppingList';

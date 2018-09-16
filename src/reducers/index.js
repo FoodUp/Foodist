@@ -141,7 +141,7 @@ const recipeItems = [
 ];
 
 
-const itemListReducer = (state = recipeItems, action)=>{
+const itemsReducer = (state = recipeItems, action)=>{
     switch(action.type){
         default : return state;
     }
@@ -156,7 +156,7 @@ const searchTermReducer = (state = '', action)=>{
 };
 
 const rootReducer = combineReducers({
-    items      : itemListReducer,
+    items      : itemsReducer,
     searchTerm : searchTermReducer
 })
 
