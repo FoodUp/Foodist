@@ -1,3 +1,12 @@
+.time:before {
+  content: "\e907";
+}
+.timer:before {
+  content: "\e906";
+}
+.user-group:before {
+  content: "\e909";
+}
 .cross:before {
   content: "\e905";
 }
@@ -16,3 +25,22 @@
 .chef:before {
   content: "\e904";
 }
+.pacman:before {
+  content: "\e916";
+}
+.spoon-knife:before {
+  content: "\e9a3";
+}
+.happy:before {
+  content: "\e9df";
+}
+.happy2:before {
+  content: "\e9e0";
+}
+.tongue:before {
+  content: "\e9e3";
+}
+.tongue2:before {
+  content: "\e9e4";
+}
+

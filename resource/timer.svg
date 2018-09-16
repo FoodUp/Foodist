@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="25px" viewBox="0 0 23 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>timer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-7" transform="translate(-21.000000, -18.000000)" fill="#000000">
+            <g id="timer" transform="translate(21.000000, 18.000000)">
+                <path d="M11,25 C4.92486775,25 0,20.0751322 0,14 C0,7.92486775 4.92486775,3 11,3 C17.0751322,3 22,7.92486775 22,14 C22,20.0751322 17.0751322,25 11,25 Z M11,23 C15.9705627,23 20,18.9705627 20,14 C20,9.02943725 15.9705627,5 11,5 C6.02943725,5 2,9.02943725 2,14 C2,18.9705627 6.02943725,23 11,23 Z" id="Combined-Shape"></path>
+                <rect id="Rectangle-2" x="8" y="0.5" width="7" height="2" rx="1"></rect>
+                <rect id="Rectangle-8" transform="translate(21.288123, 6.238798) rotate(49.000000) translate(-21.288123, -6.238798) " x="20.2881234" y="4.73879812" width="2" height="3" rx="1"></rect>
+                <path d="M10.4331131,12.4093438 C10.8013029,12.4093438 13.388128,12.4177803 18.1935882,12.4346532 C13.388128,11.0844469 10.8013029,10.4093438 10.4331131,10.4093438 C9.88082835,10.4093438 9.4331131,10.8570591 9.4331131,11.4093438 C9.4331131,11.9616286 9.88082835,12.4093438 10.4331131,12.4093438 Z" id="Oval-7" transform="translate(13.813351, 11.421998) rotate(-45.000000) translate(-13.813351, -11.421998) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

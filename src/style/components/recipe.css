@@ -1,0 +1,30 @@
+@value sliver, dark from "../shared/varaible.css";
+.img{    
+    height: 500px;
+    width: 70%;
+    background-size: cover;
+    background-position: center;
+}
+.intro{
+    color: dark;
+    width: 30%;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+.intro>p{
+    font-style: italic;
+}
+.flex{
+    margin: 0 20px;
+    display: flex;
+    border-radius: 8px;
+    border : 1px solid sliver;
+    overflow: hidden;
+}
+.tag{
+    padding:  10px;
+    border-radius: 5px;
+}
+.steps{
+    padding: 10px;
+}
