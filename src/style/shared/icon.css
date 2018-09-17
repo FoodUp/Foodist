@@ -4,7 +4,7 @@
 .timer:before {
   content: "\e906";
 }
-.user-group:before {
+.people:before {
   content: "\e909";
 }
 .cross:before {
