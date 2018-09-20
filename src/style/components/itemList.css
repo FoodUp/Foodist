@@ -5,6 +5,20 @@
 }
 @value mobile, tablet, desktop, deskTab, cloud from "../shared/varaible.css";
 
+@keyframes clickMe {
+    0%{
+        transform: rotateZ(0deg) translateY(0px);
+    }
+    30%{
+        transform: rotateZ(50deg);
+    }
+    60%{
+        transform: rotateZ(-50deg);
+    }  
+    100%{
+        transform: rotateZ(0deg) translateY(0px);
+    }
+}
 .card {
     padding: 18px;
     box-sizing: border-box;
@@ -70,6 +84,12 @@
         right: 20px;
         padding: 10px;
         color: #FFFFFF;
+        cursor: pointer;
+    }
+    .addToBasket:hover{
+        animation-name: clickMe;
+        animation-duration: .4s;
+        animation-iteration-count: 1;
     }
     .card:hover .insideWrapper{
         opacity: 1;

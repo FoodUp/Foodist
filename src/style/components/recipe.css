@@ -1,4 +1,4 @@
-@value sliver, grey, cloud from "../shared/varaible.css";
+@value sliver, grey, cloud, dark from "../shared/varaible.css";
 .img{    
     height: 500px;
     width: 70%;
@@ -20,10 +20,6 @@
     border : 1px solid sliver;
     overflow: hidden;
 }
-.tag{
-    padding:  10px;
-    border-radius: 5px;
-}
 
 .number{
     color: grey;
@@ -39,7 +35,7 @@
 .tag{
     border: cloud solid 1px;
     border-radius: 3px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     margin-right: 10px;
     display: inline-block;
 }
@@ -51,11 +47,41 @@
     margin: 0 20px;    
 }
 .steps{
-    width: 70%;
-    padding: 30px 0 ; 
+    width: 70%;    
+    padding: 40px 30px;
+    box-sizing: border-box; 
 }
 .list{
     box-sizing: border-box;
     width: 30%;
-    padding: 15px;
+    padding: 40px 30px;
+}
+.list ul {
+    list-style: none;
+    padding: 0;
+}
+.list li{
+    cursor: pointer;
+    line-height: 30px;
+}
+.box{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border: 1px solid silver;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    font-size: 22px;
+}
+.separator{
+    width: calc( 100% - 70px);
+    height: 1px;
+    background-color: sliver;
 }

@@ -48,22 +48,22 @@ const recipeItems = {
         ],
         "steps" : [
             {
-                "text": "cut mango into little cube"
+                "text": "Get a fresh mango, cut it into little cube."
             },
             {
-                "text": "mix gelatine with water, boil and stir it until the liquide get ..."
+                "text": "Mix gelatine powder with water, boil it and stir to distribute the powder"
             },
             {
-                "text": "add milk and coco cream into the ... ,add some surger or honey as you prefer"
+                "text": "Add milk and coco cream into the liquide mixed ,add some surger or honey as you prefer."
             },
             {
-                "text": "Pour the boiling coco milk into a glass container, put the mango cube in it"
+                "text": "Pour the boiling coco milk into a glass container, put the mango cube in it. The mango would float slightly "
             },
             {
-                "text": "leave it cool down and freeze in the fridge"
+                "text": "Leave it cool down and thenfreeze in the fridge for more than 2 hours. Be patient :)"
             },
             { 
-                "text": "serve it after 2 hours >o< "
+                "text": "Take the box out of the fridge, cut the pudding into little cube. Enjoy this freshing dessert. "
             }
     
         ]
@@ -150,7 +150,29 @@ const recipeItems = {
             "smoothie"
         ],
         "type": "breakfast",
-        "image" : "7.jpg"
+        "image" : "7.jpg",
+        "ingredients" : [
+            {
+                "name": "Ripe banana",
+                "amount": 1,
+                "unit": ""
+            },
+            {
+                "name": "Ripe avocado",
+                "amount": 1,
+                "unit" : ""
+            },
+            {
+                "name": "Milk",
+                "amount": 2,
+                "unit" : "cups"
+            },
+            {
+                "name": "Yaourt",
+                "amount": 2,
+                "unit" : "cups"
+            }
+        ] 
     }
 };
 

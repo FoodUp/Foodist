@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { img, intro, introDiv, number, tag, timer, people,
-    detailDiv, steps, list
+    detailDiv, steps, list, flex, separator, title, box
 } from '../style/components/recipe.css';
 
 const Recipe = ({match, recipeObj}) => {
@@ -15,7 +15,10 @@ const Recipe = ({match, recipeObj}) => {
         recipeObj.steps.map((e, i) => {
             return (
                 <div key= {i}>
-                    Step {i+1}
+                    <div className = { flex }>
+                        <span className = { title }> Step {i+1}</span>
+                        <div className={ separator } ></div>  
+                    </div>
                     <p>{ e.text }</p>
                 </div>
                 );
@@ -23,7 +26,10 @@ const Recipe = ({match, recipeObj}) => {
     const ingredientList = (recipeObj.ingredients)?
         recipeObj.ingredients.map((e, i) => {
             return (
-                <li key= {i}>{ e.amount } { e.unit } { e.name }</li>
+                <li key= {i}>
+                    <span className={ box }></span>
+                    { e.amount } { e.unit } { e.name } 
+                </li>
             )
         }):'';
 
@@ -32,7 +38,7 @@ const Recipe = ({match, recipeObj}) => {
             <div className={ introDiv }>
                 <div className = { img } style = {imageStyle} ></div>
                 <div className = { intro }>
-                    <h2> { recipeObj.name }  </h2>
+                    <h1> { recipeObj.name }  </h1>
                     <div className = { number }>
                         <span>
                             <i className={ timer } ></i>{recipeObj.time.amount }{recipeObj.time.unit}
@@ -50,12 +56,10 @@ const Recipe = ({match, recipeObj}) => {
             </div>
             <div className ={ detailDiv }>
                 <div className={ steps } >
-                    <p>Let's start ! </p>
-                    
                     { stepsContent }
                 </div>
                <div className={ list }>
-                    <p>Ingredients </p>
+                    <div className = { title }>Ingredients </div>
                     <ul>
                         { ingredientList }
                     </ul>
