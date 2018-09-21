@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { img, intro, introDiv, number, tag, timer, people,
-    detailDiv, steps, list, flex, separator, title, box
+    detailDiv, steps, list, flex, separator, title
 } from '../style/components/recipe.css';
+import IngredientLine from "./ingredientLine";
 
 const Recipe = ({match, recipeObj}) => {
     const imageStyle = {
@@ -25,12 +26,7 @@ const Recipe = ({match, recipeObj}) => {
         }):'';
     const ingredientList = (recipeObj.ingredients)?
         recipeObj.ingredients.map((e, i) => {
-            return (
-                <li key= {i}>
-                    <span className={ box }></span>
-                    { e.amount } { e.unit } { e.name } 
-                </li>
-            )
+            return <IngredientLine key={i} object={e} / >
         }):'';
 
     return (
