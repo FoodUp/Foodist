@@ -66,7 +66,8 @@ const recipeItems = {
                 "text": "Take the box out of the fridge, cut the pudding into little cube. Enjoy this freshing dessert. "
             }
     
-        ]
+        ],
+        "color": "#EFD36E",
     },
     2: {
         "name": "Vegan burger",
@@ -80,7 +81,8 @@ const recipeItems = {
             "vegan"
         ],
         "type": "main course",
-        "image" : "2.jpg"
+        "image" : "2.jpg",
+        "color": "#A5D3A8",
     },
     3: {
         "name": "Fresh Mix",
@@ -95,6 +97,7 @@ const recipeItems = {
         ],
         "type": "Salad",
         "image" : "3.jpg",
+        "color" : "#BBD3B1",
     },
     4: {
         "name": "Laozao",
@@ -108,7 +111,8 @@ const recipeItems = {
             "tropical"
         ],
         "type": "dessert",
-        "image" : "4.jpg"
+        "image" : "4.jpg",
+        "color" : "#EAE9E1",
     },
     5: {
         "name": "Pasta",
@@ -122,7 +126,8 @@ const recipeItems = {
             "tropical"
         ],
         "type": "dessert",
-        "image" : "5.jpg"
+        "image" : "5.jpg",
+        "color" : "#EFD0A0",        
     },
     6:{
         "name": "Baozai Rice",
@@ -136,7 +141,8 @@ const recipeItems = {
             "tropical"
         ],
         "type": "dessert",
-        "image" : "6.jpg"
+        "image" : "6.jpg",
+        "color" : "#D698B2",        
     },
     7:{
         "name": "Avocado Banana Smoothie",
@@ -172,7 +178,8 @@ const recipeItems = {
                 "amount": 2,
                 "unit" : "cups"
             }
-        ] 
+        ],
+        "color" : "#BED392",        
     }
 };
 
