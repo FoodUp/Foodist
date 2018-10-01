@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { box, selectedBox } from '../style/components/ingredientLine.css';
+import { connect } from 'react-redux';
 
 class IngredientLine extends Component{
     constructor(props){
@@ -21,5 +22,8 @@ class IngredientLine extends Component{
         );
     }
 }
-
-export default IngredientLine;
+const mapPropsToState = (state, ownProps)=>{
+    const ingredientObj = state.ingredients[ownProps.object.id];
+    return { object : Object.assign(ingredientObj, ownProps.object) };
+}
+export default connect(mapPropsToState)(IngredientLine);

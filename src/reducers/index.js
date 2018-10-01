@@ -23,25 +23,25 @@ const recipeItems = {
         ],
         "ingredients": [
             {
-                "name": "Coco Cream",
+                "id": 1,
                 "amount": 100,
                 "unit": "ml"
             },
             {
-                "name": "Fresh Mango",
+                "id": 2, 
                 "amount": 1,
                 "unit" : "piece"
             },
             {
-                "name": "Milk",
+                "id": 3,
                 "amount": 50,
                 "unit" : "ml"
             },
             {
-                "name": "Suger"
+                "id": 4
             }, 
             {
-                "name": "gelatine",
+                "id": 5,
                 "amount": 200,
                 "unit" : "g"
             }
@@ -159,22 +159,22 @@ const recipeItems = {
         "image" : "7.jpg",
         "ingredients" : [
             {
-                "name": "Ripe banana",
+                "id": 6,
                 "amount": 1,
                 "unit": ""
             },
             {
-                "name": "Ripe avocado",
+                "id": 3,
                 "amount": 1,
                 "unit" : ""
             },
             {
-                "name": "Milk",
+                "id": 7,
                 "amount": 2,
                 "unit" : "cups"
             },
             {
-                "name": "Yaourt",
+                "id": 8,
                 "amount": 2,
                 "unit" : "cups"
             }
@@ -183,12 +183,49 @@ const recipeItems = {
     }
 };
 
+const ingredients = {
+        1: {
+            "name": "Coco Cream"
+        },
+        2: {
+            "name": "Fresh Mango",
+            "type": "fruit"
+        },
+        3: {
+            "name": "Milk",
+            "type": "beverage"
+        },
+        4: {
+            "name": "Suger"
+        }, 
+        5: {
+            "name": "gelatine",
+        },
+        6: {
+            "name": "Ripe banana",
+            "type": "fruit"
+        },
+        7: {
+            "name": "Ripe avocado",
+            "type": "fruit"
+        },
+        8: {
+            "name": "Yaourt",
+        }
+}
+
 const itemsReducer = (state = recipeItems, action)=>{
     switch(action.type){
         default : return state;
     }
 };
-
+const ingredientsReducer = (state = ingredients, action)=>{
+    switch(action.type){
+        case 'SELECT_INGREDIENT' : 
+            return ingredients[state.id];
+        default : return ingredients;
+    }
+};
 const searchTermReducer = (state = '', action)=>{
     switch(action.type){
         case SEARCH_ITEM : 
@@ -199,6 +236,7 @@ const searchTermReducer = (state = '', action)=>{
 
 const rootReducer = combineReducers({
     items      : itemsReducer,
+    ingredients : ingredientsReducer,
     searchTerm : searchTermReducer
 })
 
