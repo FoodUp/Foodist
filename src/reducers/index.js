@@ -214,6 +214,12 @@ const ingredients = {
         }
 }
 
+const addedRecipe = {
+    1 : {
+        id : 1,
+        person : 2
+    }
+}
 const itemsReducer = (state = recipeItems, action)=>{
     switch(action.type){
         default : return state;
