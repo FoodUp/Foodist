@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import { SEARCH_ITEM } from '../actions';
+import { SEARCH_ITEM, ADD_BASKET, UPDATE_BASKET, REMOVE_BASKET} from '../actions';
 
 const recipeItems = {
     1: {
+        id: 1,
         "name": "Coco Mango Cube",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
@@ -70,6 +71,7 @@ const recipeItems = {
         "color": "#EFD36E",
     },
     2: {
+        id: 2,
         "name": "Vegan burger",
         "description" : "Delicious healthy burger",
         "person" : 1, 
@@ -84,7 +86,8 @@ const recipeItems = {
         "image" : "2.jpg",
         "color": "#A5D3A8",
     },
-    3: {
+    3:{
+        id: 3,
         "name": "Fresh Mix",
         "description" : "Refreshing quick salad after long tiring workday",
         "person" : 1, 
@@ -100,6 +103,7 @@ const recipeItems = {
         "color" : "#BBD3B1",
     },
     4: {
+        id: 4,
         "name": "Laozao",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
@@ -115,6 +119,7 @@ const recipeItems = {
         "color" : "#EAE9E1",
     },
     5: {
+        id: 5,
         "name": "Pasta",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
@@ -130,6 +135,7 @@ const recipeItems = {
         "color" : "#EFD0A0",        
     },
     6:{
+        id: 6,
         "name": "Baozai Rice",
         "description" : "Refreshing dessert in summer day",
         "person" : 1, 
@@ -145,6 +151,7 @@ const recipeItems = {
         "color" : "#D698B2",        
     },
     7:{
+        id: 7,
         "name": "Avocado Banana Smoothie",
         "description" : "Best smoothie ever, loaded with greens, healthy fats, and protein",
         "person" : 2, 
@@ -214,12 +221,29 @@ const ingredients = {
         }
 }
 
-const addedRecipe = {
-    1 : {
-        id : 1,
-        person : 2
+const addedRecipesReducer = (state = [], action) =>{
+    switch(action.type){
+        case ADD_BASKET :
+            return [ 
+                ...state, 
+                {
+                    id : action.id
+                }
+            ];
+        case UPDATE_BASKET : 
+            return state.map( addedRecipe =>
+                (addedRecipe.id == action.id)? {
+                    ...addedRecipe, person : action.person
+                }:addedRecipe
+            );
+        case REMOVE_BASKET : 
+            return state.filter( addedRecipe => {
+                return addedRecipe.id !== action.id
+            })
+        default : return state;
     }
-}
+};
+
 const itemsReducer = (state = recipeItems, action)=>{
     switch(action.type){
         default : return state;
@@ -241,6 +265,7 @@ const searchTermReducer = (state = '', action)=>{
 };
 
 const rootReducer = combineReducers({
+    addedRecipes : addedRecipesReducer,
     items      : itemsReducer,
     ingredients : ingredientsReducer,
     searchTerm : searchTermReducer
