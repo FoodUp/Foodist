@@ -11,14 +11,14 @@ class SearchResultPage extends Component {
     render(){
         return(
             <div className="container">
-                <ItemsList items = { this.props.searchResultItems } />
+                <ItemsList items ={ this.props.searchResultItems } />
             </div>       
         );
     }
 }
 
 function searchInObject(obj, term){
-    let filtered = _.pickBy(obj, function(element){
+    let filtered = _.filter(obj, function(element){
         //search by name anf type
         return element.name.toLowerCase().indexOf(term.toLowerCase())> -1 
             || element.type.toLowerCase().indexOf(term.toLowerCase())> -1 ;
