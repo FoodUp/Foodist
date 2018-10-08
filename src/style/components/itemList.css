@@ -3,7 +3,7 @@
     width: 100%;
     flex-wrap: wrap;
 }
-@value mobile, tablet, desktop, deskTab, cloud from "../shared/varaible.css";
+@value mobile, tablet, desktop, deskTab, cloud, primary from "../shared/varaible.css";
 
 @keyframes clickMe {
     0%{
@@ -78,7 +78,7 @@
         padding: 10px;
         color: cloud;
     }
-    .addToBasket{
+    .basketContainer{
         composes: insideWrapper;
         top: 20px;
         right: 20px;
@@ -86,9 +86,22 @@
         color: #FFFFFF;
         cursor: pointer;
     }
-    .addToBasket:hover{
+    .addedBasketContainer{
+        composes: insideWrapper;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        color: primary;
+        cursor: pointer;
+    }
+    .basketContainer:hover{
         animation-name: clickMe;
         animation-duration: .4s;
+        animation-iteration-count: 1;
+    }
+    .addedBasketContainer:hover{
+        animation-name: clickMe;
+        animation-duration: 1s;
         animation-iteration-count: 1;
     }
     .card:hover .insideWrapper{

@@ -19,10 +19,28 @@
     composes: chef from '../shared/icon.css';
     color: sliver;
 }
-.list{
-    text-decoration: none;
-    composes: list from '../shared/icon.css';
+.basketIcon{
+    composes: basket from '../shared/icon.css';
     color: sliver;
+}
+.basket{
+    position: relative;
+}
+.basket>.quantity{
+    position: absolute;
+    background: primary;
+    color: #fff;
+    border-radius: 50%;
+    top: -12px;
+    right: -12px;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-top: 3px;
+    font-size: 14px;
+
 }
 .logoLink{
     text-decoration: none;
