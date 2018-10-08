@@ -17,10 +17,15 @@ import Recipe from './components/recipe';
 import NavBar from './components/navbar';
 import NoMatch from './components/nomatch';
 
+
 class App extends Component {
   render() {
+    const store = createStore(
+      rootReducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
     return (
-      <Provider store={createStore(rootReducer)} >
+      <Provider store={store} >
         <Router >
           <div>
             <header>
