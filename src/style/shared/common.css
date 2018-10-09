@@ -1,46 +1,37 @@
-@value tablet, mobile, desktop from "./varaible.css";
-
-body{
-    font-family: 'Titillium Web', sans-serif;
+@value (tablet, mobile, desktop) from "./varaible.css";
+body {
+    font-family: "Titillium Web", sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-@media mobile{
-    :global(.container){
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+@media mobile {
+    :global(.container) {
         padding: 0px;
         max-width: 1320px;
         margin: 0 auto;
     }
 }
 
-@media tablet{
-    :global(.container){
+@media tablet {
+    :global(.container) {
         padding: 0px 22px;
         max-width: 1320px;
         margin: 0 auto;
     }
 }
 
-@media desktop{
-    :global(.container){
+@media desktop {
+    :global(.container) {
         padding: 0px 62px;
         max-width: 1320px;
         margin: 0 auto;
     }
 }
-/* :global(.fsXS){
-    font-size: .5em;
-}
-:global(.fsS){
-    font-size: 1em;
-}
-:global(.fsM){
-    font-size: 1.5em;
-}
-:global(.fsL){
-    font-size: 2em;
-}
-:global(.fsXL){
-    font-size: 2.5em;
-} */
