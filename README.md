@@ -26,3 +26,6 @@ Motivation
 4. I want to learn skill of design, including design icon, choosing color and font 
 5. further goal : take user experience and web performance into consideration
 
+
+install mongo in MAC OS : 
+https://treehouse.github.io/installation-guides/mac/mongo-mac.html
