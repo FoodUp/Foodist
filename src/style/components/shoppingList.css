@@ -1,0 +1,26 @@
+.slItem {
+    display: flex;
+    padding-bottom: 10px;
+    align-content: center;
+}
+
+.slItem>div {
+    margin: 0 15px;
+}
+
+.itemImg {
+    height: 200px;
+    width: 25%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+.itemIntro {
+    align-self: center;
+    flex-grow: 1;
+}
+
+.itemCheckList {
+    flex-grow: 2;
+}

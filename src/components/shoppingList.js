@@ -1,5 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+import {
+  slItem,
+  itemImg,
+  itemIntro,
+  itemCheckList
+} from "../style/components/shoppingList.css";
 import _ from "lodash";
 import IngredientLine from "./ingredientLine";
 
@@ -11,26 +17,31 @@ const ShoppingListPage = ({ addedRecipesArray }) => {
           return <IngredientLine key={i} object={e} />;
         })
       : "";
+    const personDiv = recipeObj.personRequired ? (
+      <div>{recipeObj.personRequired}</div>
+    ) : recipeObj.person ? (
+      <div>{recipeObj.person}</div>
+    ) : (
+      ""
+    );
+    const imgStyle = {
+      backgroundImage: `url("/image/recipes/${recipeObj.image}")`
+    };
     return (
-      <li key={recipeObj.id}>
-        <img
-          src={`/image/recipes/${recipeObj.image}`}
-          alt={recipeObj.name}
-          height="200"
-          width="200"
-        />
-        {recipeObj.name}
-        {recipeObj.personRequired
-          ? recipeObj.personRequired
-          : recipeObj.person
-            ? recipeObj.person
-            : ""}
-        <ul>{ingredientList}</ul>
+      <li key={recipeObj.id} className={slItem}>
+        <div style={imgStyle} className={itemImg} />
+        <div className={itemIntro}>
+          <div>{recipeObj.name}</div>
+          {personDiv}
+        </div>
+        <div className={itemCheckList}>
+          <ul>{ingredientList}</ul>
+        </div>
       </li>
     );
   });
   return (
-    <div className="container">
+    <div className="page-container-responsive">
       <h2>shopping list </h2>
       <ul>{addedRecipesList}</ul>
     </div>
