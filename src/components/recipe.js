@@ -1,33 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
 import {
-  img,
-  intro,
-  introDiv,
-  number,
-  tag,
-  timer,
-  people,
   detailDiv,
-  steps,
+  stepsDiv,
   list,
   flex,
   separator,
   title
 } from "../style/components/recipe.css";
 import IngredientLine from "./ingredientLine";
-
+import RecipeIntro from "./recipeIntro";
 const Recipe = ({ recipeObj }) => {
-  const imageStyle = {
-    backgroundImage: `url("/image/recipes/${recipeObj.image}")`
-  };
-  const tagList = recipeObj.tag.map(element => {
-    return (
-      <span className={tag} key={element}>
-        {element}
-      </span>
-    );
-  });
   const stepsContent = recipeObj.steps
     ? recipeObj.steps.map((e, i) => {
         return (
@@ -46,32 +29,12 @@ const Recipe = ({ recipeObj }) => {
         return <IngredientLine key={i} object={e} />;
       })
     : "";
-
+  const { steps, ingredients, ...introObj } = recipeObj;
   return (
     <div className="container">
-      <div className={introDiv}>
-        <div className={img} style={imageStyle} />
-        <div className={intro}>
-          <h1> {recipeObj.name} </h1>
-          <div className={number}>
-            <span>
-              <i className={timer} />
-              {recipeObj.time.amount}
-              {recipeObj.time.unit}
-            </span>
-            <span>
-              <i className={people} /> {recipeObj.person} persons
-            </span>
-          </div>
-          <p> {recipeObj.description}</p>
-          <div>
-            <span className={tag}> {recipeObj.type}</span>
-            {tagList}
-          </div>
-        </div>
-      </div>
+      <RecipeIntro {...introObj} />
       <div className={detailDiv}>
-        <div className={steps}>{stepsContent}</div>
+        <div className={stepsDiv}>{stepsContent}</div>
         <div className={list}>
           <div className={title}>Ingredients </div>
           <ul>{ingredientList}</ul>

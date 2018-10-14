@@ -1,79 +1,100 @@
-@value sliver, grey, cloud, dark from "../shared/varaible.css";
-.img{    
-    height: 500px;
-    width: 70%;
-    background-size: cover;
-    background-position: center;
-}
-.intro{
-    width: 30%;
-    padding: 0 24px;
-    box-sizing: border-box;
-}
-.intro>p{
-    font-style: italic;
-}
-.introDiv{
-    display: flex;    
-    margin: 0 20px;
-    border-radius: 8px;
-    border : 1px solid sliver;
-    overflow: hidden;
+@value (sliver, grey, cloud, dark, primary) from "../shared/varaible.css";
+.img {
+  height: 500px;
+  width: 60%;
+  background-size: cover;
+  background-position: center;
 }
 
-.number{
-    color: grey;
-    display: flex;
-    justify-content: space-between;
+.intro {
+  width: 40%;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
-.timer{
-    composes: timer from '../shared/icon.css';
+
+.introDiv {
+  display: flex;
+  margin: 0 20px;
+  border-radius: 8px;
+  border: 1px solid sliver;
+  overflow: hidden;
 }
-.people{
-    composes: people from '../shared/icon.css';
+
+.number {
+  color: sliver;
+  display: flex;
 }
-.tag{
-    border: cloud solid 1px;
-    border-radius: 3px;
-    padding: 10px 15px;
-    margin-right: 10px;
-    display: inline-block;
+
+.number > span {
+  padding-right: 10px;
 }
-.tag:hover{
-    border: grey solid 1px;
+
+.number > span:last-of-type {
+  margin-left: auto;
 }
-.detailDiv{
-    display: flex;
-    margin: 0 20px;    
+
+.tag {
+  border: cloud solid 1px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  display: inline-block;
 }
-.steps{
-    width: 70%;    
-    padding: 40px 30px;
-    box-sizing: border-box; 
+
+.tag:hover {
+  border: grey solid 1px;
 }
-.list{
-    box-sizing: border-box;
-    width: 30%;
-    padding: 40px 30px;
+
+.detailDiv {
+  display: flex;
+  margin: 0 20px;
 }
+
+.stepsDiv {
+  width: 70%;
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+
+.list {
+  box-sizing: border-box;
+  width: 30%;
+  padding: 40px 30px;
+}
+
 .list ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
-.list li{
-    cursor: pointer;
-    line-height: 30px;
+
+.list li {
+  cursor: pointer;
+  line-height: 30px;
 }
-.flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.title{
-    font-size: 22px;
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
 }
-.separator{
-    width: calc( 100% - 70px);
-    height: 1px;
-    background-color: sliver;
+
+.separator {
+  width: calc(100% - 70px);
+  height: 1px;
+  background-color: sliver;
+}
+
+.basket {
+  composes: basket from "../shared/icon.css";
+  cursor: pointer;
+}
+
+.addedBasket {
+  composes: basket;
+  color: primary;
 }
