@@ -1,114 +1,129 @@
-.r{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+.r {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
-@value mobile, tablet, desktop, deskTab, cloud, primary from "../shared/varaible.css";
 
+@value (mobile, tablet, desktop, deskTab, cloud, primary) from "../shared/varaible.css";
 @keyframes clickMe {
-    0%{
-        transform: rotateZ(0deg) translateY(0px);
-    }
-    30%{
-        transform: rotateZ(50deg);
-    }
-    60%{
-        transform: rotateZ(-50deg);
-    }  
-    100%{
-        transform: rotateZ(0deg) translateY(0px);
-    }
+  0% {
+    transform: rotateZ(0deg) translateY(0px);
+  }
+  30% {
+    transform: rotateZ(50deg);
+  }
+  60% {
+    transform: rotateZ(-50deg);
+  }
+  100% {
+    transform: rotateZ(0deg) translateY(0px);
+  }
 }
+
 .card {
-    padding: 18px;
-    box-sizing: border-box;
-    align-self: auto;
-    position: relative;
+  padding: 18px;
+  box-sizing: border-box;
+  align-self: auto;
+  position: relative;
 }
+
 @media mobile {
-    .card {
-        width: 100%;
-    }
+  .card {
+    width: 100%;
+  }
 }
+
 @media tablet {
-    .card {
-        width: 50%;
-    }
+  .card {
+    width: 50%;
+  }
 }
+
 @media desktop {
-    .card {
-        width: 33.3%;
-    }
+  .card {
+    width: 33.3%;
+  }
 }
-.imgWrapper{
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
+
+.imgWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
 }
-.itemImg{
-    padding-top : 70%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+
+.itemImg {
+  padding-top: 70%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
-@media desktop{
-    .insideWrapper{
-        opacity: 0;
-        position: absolute;
-    }
+
+@media desktop {
+  .insideWrapper {
+    opacity: 0;
+    position: absolute;
+  }
 }
+
 .shadow {
-    composes: insideWrapper;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(180deg,rgba(0,0,0,.2) 0,transparent 30%,transparent 70%,rgba(0,0,0,.3));
+  composes: insideWrapper;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0,
+    transparent 30%,
+    transparent 70%,
+    rgba(0, 0, 0, 0.3)
+  );
 }
-@media desktop{
-    .title{
-        composes: insideWrapper;
-        bottom: 20px;
-        padding: 10px;
-        color: cloud;
-    }
-    .time{
-        composes: insideWrapper;
-        top: 20px;
-        padding: 10px;
-        color: cloud;
-    }
-    .basketContainer{
-        composes: insideWrapper;
-        top: 20px;
-        right: 20px;
-        padding: 10px;
-        color: #FFFFFF;
-        cursor: pointer;
-    }
-    .addedBasketContainer{
-        composes: insideWrapper;
-        top: 20px;
-        right: 20px;
-        padding: 10px;
-        color: primary;
-        cursor: pointer;
-    }
-    .basketContainer:hover{
-        animation-name: clickMe;
-        animation-duration: .4s;
-        animation-iteration-count: 1;
-    }
-    .addedBasketContainer:hover{
-        animation-name: clickMe;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-    }
-    .card:hover .insideWrapper{
-        opacity: 1;
-    }
-    .card:hover .itemImg{
-        transform: scale(1.1);
-        transition: .5s ease-out;
-    }
+
+@media desktop {
+  .title {
+    composes: insideWrapper;
+    bottom: 20px;
+    padding: 10px;
+    color: cloud;
+  }
+  .time {
+    composes: insideWrapper;
+    top: 20px;
+    padding: 10px;
+    color: cloud;
+  }
+  .basketContainer {
+    composes: insideWrapper;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .addedBasketContainer {
+    composes: insideWrapper;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    color: primary;
+    cursor: pointer;
+  }
+  .basketContainer:hover {
+    animation-name: clickMe;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+  }
+  .addedBasketContainer:hover {
+    animation-name: clickMe;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+  .card:hover .insideWrapper {
+    opacity: 1;
+  }
+  .card:hover .itemImg {
+    transform: scale(1.1);
+    transition: 0.5s ease-out;
+  }
 }
