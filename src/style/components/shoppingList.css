@@ -1,16 +1,32 @@
-.slItem {
-    display: flex;
-    padding-bottom: 10px;
-    align-content: center;
+@value sliver from "../shared/varaible.css";
+.sl {
+    font-size: 24px;
 }
 
-.slItem>div {
+.slItem {
+    border-bottom: 1px solid sliver;
+    margin-bottom: 30px;
+}
+
+.slItem:last-of-type {
+    border-bottom: 0px;
+}
+
+.flex {
+    display: flex;
+    padding-top: 15px;
+    align-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.flex>div {
     margin: 0 15px;
 }
 
 .itemImg {
     height: 200px;
-    width: 25%;
+    width: 40%;
     background-position: center;
     background-size: cover;
     border-radius: 4px;

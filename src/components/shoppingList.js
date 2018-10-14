@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import {
+  flex,
+  sl,
   slItem,
   itemImg,
   itemIntro,
@@ -11,7 +13,6 @@ import IngredientLine from "./ingredientLine";
 
 const ShoppingListPage = ({ addedRecipesArray }) => {
   const addedRecipesList = _.map(addedRecipesArray, recipeObj => {
-    console.log(recipeObj.ingredients);
     const ingredientList = recipeObj.ingredients
       ? recipeObj.ingredients.map((e, i) => {
           return <IngredientLine key={i} object={e} />;
@@ -29,13 +30,15 @@ const ShoppingListPage = ({ addedRecipesArray }) => {
     };
     return (
       <li key={recipeObj.id} className={slItem}>
-        <div style={imgStyle} className={itemImg} />
         <div className={itemIntro}>
           <div>{recipeObj.name}</div>
           {personDiv}
         </div>
-        <div className={itemCheckList}>
-          <ul>{ingredientList}</ul>
+        <div className={flex}>
+          <div style={imgStyle} className={itemImg} />
+          <div className={itemCheckList}>
+            <ul>{ingredientList}</ul>
+          </div>
         </div>
       </li>
     );
@@ -43,7 +46,11 @@ const ShoppingListPage = ({ addedRecipesArray }) => {
   return (
     <div className="page-container-responsive">
       <h2>shopping list </h2>
-      <ul>{addedRecipesList}</ul>
+      <ul className={sl}>
+        {addedRecipesList.length > 0
+          ? addedRecipesList
+          : "Shopping basket is empty"}
+      </ul>
     </div>
   );
 };
