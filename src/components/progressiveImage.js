@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { itemImg } from "../style/components/itemList.css";
+import { itemImg } from "../style/components/recipeItem.css";
 
 class ProgressiveImage extends Component {
   constructor(props) {

@@ -11,8 +11,9 @@ import {
   basketContainer,
   addedBasketContainer,
   shadow,
-  imgWrapper
-} from "../style/components/itemList.css";
+  imgWrapper,
+  itemText
+} from "../style/components/recipeItem.css";
 import { basket } from "../style/shared/icon.css";
 import ProgressiveImage from "./progressiveImage";
 
@@ -28,7 +29,7 @@ const RecipeItem = ({ inBasket, item, addToBasket, removeBasket }) => {
           <div className={shadow} />
         </div>
       </Link>
-      <div>
+      <div className={itemText}>
         <div className={title}>{item.name}</div>
         <div className={time}>
           {item.time.amount} {item.time.unit}
