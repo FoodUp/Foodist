@@ -1,42 +1,43 @@
 @value sliver from "../shared/varaible.css";
 .sl {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .slItem {
-    border-bottom: 1px solid sliver;
-    margin-bottom: 30px;
+  border-bottom: 1px solid sliver;
+  margin-bottom: 30px;
 }
 
 .slItem:last-of-type {
-    border-bottom: 0px;
+  border-bottom: 0px;
 }
 
 .flex {
-    display: flex;
-    padding-top: 15px;
-    align-content: center;
-    margin-right: -15px;
-    margin-left: -15px;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-content: center;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-.flex>div {
-    margin: 0 15px;
+.flex > div {
+  margin: 0 15px;
 }
 
 .itemImg {
-    height: 200px;
-    width: 40%;
-    background-position: center;
-    background-size: cover;
-    border-radius: 4px;
+  height: 200px;
+  width: 40%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
 }
 
 .itemIntro {
-    align-self: center;
-    flex-grow: 1;
+  align-self: center;
+  flex-grow: 1;
 }
 
 .itemCheckList {
-    flex-grow: 2;
+  flex-grow: 2;
 }

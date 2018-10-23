@@ -27,25 +27,25 @@ const recipeItems = {
     ],
     ingredients: [
       {
-        id: 1,
+        name: "Coco Cream",
         amount: 100,
         unit: "ml"
       },
       {
-        id: 2,
+        name: "Fresh Mango",
         amount: 1,
         unit: "piece"
       },
       {
-        id: 3,
+        name: "Milk",
         amount: 50,
         unit: "ml"
       },
       {
-        id: 4
+        name: "Suger"
       },
       {
-        id: 5,
+        name: "gelatine",
         amount: 200,
         unit: "g"
       }
@@ -122,48 +122,48 @@ const recipeItems = {
     ],
     ingredients: [
       {
-        id: 9,
+        name: "canola oil",
         amount: 1,
         unit: "tablespoon"
       },
       {
-        id: 10,
+        name: "white onion",
         amount: 1,
         unit: "piece"
       },
       {
-        id: 11,
+        name: "clove garlic",
         amount: 1,
         unit: "piece"
       },
       {
-        id: 12,
+        name: "green onions",
         amount: 1,
         unit: "piece"
       },
       {
-        id: 13,
+        name: " cumin ",
         amount: 1 / 2,
         unit: "teaspoon"
       },
       {
-        id: 14,
+        name: "mushrooms ",
         amount: 3 / 4,
         unit: "cup"
       },
       {
-        id: 15,
+        name: "parsley ",
         amount: 1,
         unit: "teaspoon"
       },
       {
-        id: 16
+        name: "Salt "
       },
       {
-        id: 17
+        name: "Black pepper "
       },
       {
-        id: 18,
+        name: "oil",
         amount: 2,
         unit: "tablespoons"
       }
