@@ -240,27 +240,39 @@ const recipeItems = {
     image: "7.jpg",
     ingredients: [
       {
-        id: 6,
+        name: "Ripe banana",
         amount: 1,
         unit: ""
       },
       {
-        id: 3,
+        name: "Milk",
         amount: 1,
         unit: ""
       },
       {
-        id: 7,
+        name: "Ripe avocado",
         amount: 2,
         unit: "cups"
       },
       {
-        id: 8,
+        name: "Yaourt",
         amount: 2,
         unit: "cups"
       }
     ],
-    color: "#BED392"
+    color: "#BED392",
+    steps: [
+      {
+        text:
+          "Blend banana, avocado and honey in a food processor until smooth."
+      },
+      {
+        text: "Add milk and blend for 30 seconds."
+      },
+      {
+        text: "Serve immediately."
+      }
+    ]
   }
 };
 
