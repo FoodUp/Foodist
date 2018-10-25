@@ -2,7 +2,7 @@
   position: relative;
 }
 
-@value ( desktop, tabMobile, cloud, primary, sliver, grey) from "../shared/varaible.css";
+@value ( desktop, tabMobile, notxs, cloud, primary, sliver, grey) from "../shared/varaible.css";
 @keyframes clickMe {
   0% {
     transform: rotateZ(0deg) translateY(0px);
@@ -18,10 +18,11 @@
   }
 }
 
-.imgWrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
+@media notxs {
+  .imgWrapper {
+    border-radius: 4px;
+    overflow: hidden;
+  }
 }
 
 .itemImg {

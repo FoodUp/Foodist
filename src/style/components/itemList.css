@@ -1,34 +1,40 @@
-@value (mobile, tablet, desktop) from "../shared/varaible.css";
+@value (mobile, tablet, desktop, xs) from "../shared/varaible.css";
 .r {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .c {
-    padding: 18px;
-    box-sizing: border-box;
-    align-self: auto;
+  padding: 18px;
+  box-sizing: border-box;
+  align-self: auto;
+}
+
+@media xs {
+  .c {
+    padding: 10px 0;
+  }
 }
 
 @media mobile {
-    .c {
-        width: 100%;
-    }
+  .c {
+    width: 100%;
+  }
 }
 
 @media tablet {
-    .c {
-        width: 50%;
-    }
+  .c {
+    width: 50%;
+  }
 }
 
 @media desktop {
-    .c {
-        width: 33.3%;
-    }
+  .c {
+    width: 33.3%;
+  }
 }
 
 .card {
-    position: relative;
+  position: relative;
 }
