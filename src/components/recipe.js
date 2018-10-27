@@ -19,7 +19,7 @@ const Recipe = ({ recipeObj }) => {
               <span className={title}> Step {i + 1}</span>
               <div className={separator} />
             </div>
-            <p>{e.text}</p>
+            <p>{e.description}</p>
           </div>
         );
       })

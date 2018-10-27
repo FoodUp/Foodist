@@ -52,26 +52,26 @@ const recipeItems = {
     ],
     steps: [
       {
-        text: "Get a fresh mango, cut it into little cube."
+        description: "Get a fresh mango, cut it into little cube."
       },
       {
-        text:
+        description:
           "Mix gelatine powder with water, boil it and stir to distribute the powder"
       },
       {
-        text:
+        description:
           "Add milk and coco cream into the liquide mixed ,add some surger or honey as you prefer."
       },
       {
-        text:
+        description:
           "Pour the boiling coco milk into a glass container, put the mango cube in it. The mango would float slightly "
       },
       {
-        text:
+        description:
           "Leave it cool down and thenfreeze in the fridge for more than 2 hours. Be patient :)"
       },
       {
-        text:
+        description:
           "Take the box out of the fridge, cut the pudding into little cube. Enjoy this freshing dessert. "
       }
     ],
@@ -93,31 +93,31 @@ const recipeItems = {
     color: "#faaf4a",
     steps: [
       {
-        text:
+        description:
           "First, sauté the diced white or yellow onion and garlic in canola oil or vegetable oil for 3 to 5 minutes, until the onions are soft."
       },
       {
-        text:
+        description:
           "Next, add the green onions, cumin, and the chopped mushrooms and cook for another 5 minutes, or until mushrooms are cooked. You can add a bit more oil if needed. Set the onion and mushroom mixture aside."
       },
       {
-        text:
+        description:
           "Next, use a fork or potato masher to mash the beans until well mashed. You can also pulse them in a food processor until smooth if you prefer."
       },
       {
-        text:
+        description:
           "In a large bowl, combine the mashed beans with the onion and mushroom mixture and add the parsley, salt, and pepper. Make sure the ingredients are well combined. "
       },
       {
-        text:
+        description:
           "Shape the mixture into patties about one inch thick. If you make them too thin, they may fall apart, but if you make them too thick, it will be more difficult to get them to cook them all the way through."
       },
       {
-        text:
+        description:
           "Heat about two tablespoons of oil and cook each patty until the veggie burgers are done, about 3 minutes on each side. You can also use an indoor grill pan to grill your veggie burgers if you have one. The onion and mushroom flavor is excellent when grilled."
       },
       {
-        text: "Serve with your choice toppings!"
+        description: "Serve with your choice toppings!"
       }
     ],
     ingredients: [
@@ -263,14 +263,14 @@ const recipeItems = {
     color: "#BED392",
     steps: [
       {
-        text:
+        description:
           "Blend banana, avocado and honey in a food processor until smooth."
       },
       {
-        text: "Add milk and blend for 30 seconds."
+        description: "Add milk and blend for 30 seconds."
       },
       {
-        text: "Serve immediately."
+        description: "Serve immediately."
       }
     ]
   }
