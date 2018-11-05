@@ -11,8 +11,9 @@ import {
 import IngredientLine from "./ingredientLine";
 import RecipeIntro from "./recipeIntro";
 const Recipe = ({ recipeObj }) => {
-  const stepsContent = recipeObj.steps
-    ? recipeObj.steps.map((e, i) => {
+  const { steps, ingredients, ...introObj } = recipeObj;
+  const stepsContent = steps
+    ? steps.map((e, i) => {
         return (
           <div key={i}>
             <div className={flex}>
@@ -24,12 +25,12 @@ const Recipe = ({ recipeObj }) => {
         );
       })
     : "";
-  const ingredientList = recipeObj.ingredients
-    ? recipeObj.ingredients.map((e, i) => {
+  const ingredientList = ingredients
+    ? ingredients.map((e, i) => {
         return <IngredientLine key={i} object={e} />;
       })
     : "";
-  const { steps, ingredients, ...introObj } = recipeObj;
+
   return (
     <div className="container">
       <RecipeIntro {...introObj} />

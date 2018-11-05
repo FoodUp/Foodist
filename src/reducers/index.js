@@ -276,67 +276,6 @@ const recipeItems = {
   }
 };
 
-const ingredients = {
-  1: {
-    name: "Coco Cream"
-  },
-  2: {
-    name: "Fresh Mango",
-    type: "fruit"
-  },
-  3: {
-    name: "Milk",
-    type: "beverage"
-  },
-  4: {
-    name: "Suger"
-  },
-  5: {
-    name: "gelatine"
-  },
-  6: {
-    name: "Ripe banana",
-    type: "fruit"
-  },
-  7: {
-    name: "Ripe avocado",
-    type: "fruit"
-  },
-  8: {
-    name: "Yaourt"
-  },
-  9: {
-    name: "canola oil"
-  },
-  10: {
-    name: "white onion"
-  },
-  11: {
-    name: "clove garlic"
-  },
-  12: {
-    name: "green onions "
-  },
-  13: {
-    name: " cumin "
-  },
-  14: {
-    name: "mushrooms "
-  },
-  15: {
-    name: "parsley "
-  },
-  16: {
-    name: "Salt "
-  },
-  17: {
-    name: "Black pepper "
-  },
-  18: {
-    name: "oil"
-  }
-};
-
 const addedRecipesReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_BASKET:
@@ -371,14 +310,7 @@ const itemsReducer = (state = recipeItems, action) => {
       return state;
   }
 };
-const ingredientsReducer = (state = ingredients, action) => {
-  switch (action.type) {
-    case "SELECT_INGREDIENT":
-      return ingredients[state.id];
-    default:
-      return ingredients;
-  }
-};
+
 const searchTermReducer = (state = "", action) => {
   switch (action.type) {
     case SEARCH_ITEM:
@@ -391,7 +323,6 @@ const searchTermReducer = (state = "", action) => {
 const rootReducer = combineReducers({
   addedRecipes: addedRecipesReducer,
   items: itemsReducer,
-  ingredients: ingredientsReducer,
   searchTerm: searchTermReducer
 });
 

@@ -7,7 +7,7 @@ const ItemsListContainer = connect(state => ({
   items: state.items
 }))(ItemsList);
 
-const Home = props => {
+const Home = () => {
   return (
     <div>
       <div className="container">
