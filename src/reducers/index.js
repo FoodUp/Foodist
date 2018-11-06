@@ -6,6 +6,7 @@ import {
   REMOVE_BASKET
 } from "../actions";
 
+//TODO: fetch all recipesItems
 const recipeItems = {
   1: {
     id: 1,
