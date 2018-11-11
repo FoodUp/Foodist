@@ -3,8 +3,10 @@ import {
   SEARCH_ITEM,
   ADD_BASKET,
   UPDATE_BASKET,
-  REMOVE_BASKET
-} from "../actions";
+  REMOVE_BASKET,
+  REQUEST_ITEMS,
+  RECEIVE_ITEMS
+} from "../actions/index";
 
 //TODO: fetch all recipesItems
 const recipeItems = {
@@ -321,10 +323,21 @@ const searchTermReducer = (state = "", action) => {
   }
 };
 
+const isFetching = (state = true, action) => {
+  switch (action.type) {
+    case REQUEST_ITEMS:
+      return true;
+    case RECEIVE_ITEMS:
+      return false;
+    default:
+      return state;
+  }
+};
 const rootReducer = combineReducers({
   addedRecipes: addedRecipesReducer,
   items: itemsReducer,
-  searchTerm: searchTermReducer
+  searchTerm: searchTermReducer,
+  isFetching
 });
 
 export default rootReducer;
