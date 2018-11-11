@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const API_URL = "http://localhost:3001/recipes";
 
 export const fetchItems = () => {

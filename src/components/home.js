@@ -1,11 +1,5 @@
 import React from "react";
-import ItemsList from "./itemsList";
-import { connect } from "react-redux";
-
-//container component
-const ItemsListContainer = connect(state => ({
-  items: state.items
-}))(ItemsList);
+import { ItemsListContainer } from "./ItemsListContainer";
 
 const Home = () => {
   return (
