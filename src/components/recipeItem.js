@@ -22,10 +22,7 @@ const RecipeItem = ({ inBasket, item, addToBasket, removeBasket }) => {
     <div className={card}>
       <Link to={`/recipe/${item.id}`}>
         <div className={imgWrapper}>
-          <ProgressiveImage
-            image={`/image/recipes/${item.image}`}
-            color={item.color}
-          />
+          <ProgressiveImage image={item.image} color={item.color} />
           <div className={shadow} />
         </div>
       </Link>
