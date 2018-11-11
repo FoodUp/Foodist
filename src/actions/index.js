@@ -6,6 +6,7 @@ export const UPDATE_BASKET = "update_basket";
 export const REMOVE_BASKET = "remove_basket";
 export const REQUEST_ITEMS = "request_items";
 export const RECEIVE_ITEMS = "receive_items";
+export const RECEIVE_ITEM = "receive_item";
 
 const requestItems = query => ({
   type: REQUEST_ITEMS,
@@ -17,12 +18,27 @@ const receiveItems = response => ({
   payload: response
 });
 
+const receiveItem = item => ({
+  type: RECEIVE_ITEM,
+  payload: item
+});
+
 export const fetchItems = query => dispatch => {
   dispatch(requestItems(query));
   return api
     .fetchItems()
     .then(receiveItems)
     .then(dispatch);
+};
+
+export const fetchItemById = id => dispatch => {
+  api
+    .fetchItemById(id)
+    .then(receiveItem)
+    .then(dispatch)
+    .catch(err => {
+      alert(err);
+    });
 };
 
 export function searchItem(searchTerm) {

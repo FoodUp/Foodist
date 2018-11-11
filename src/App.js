@@ -8,7 +8,7 @@ import store from "./store";
 import ShoppingListPage from "./components/shoppingList";
 import HomePage from "./components/home";
 import SearchResultPage from "./components/searchResult";
-import Recipe from "./components/recipe";
+import RecipeContainer from "./components/recipeContainer";
 import NavBar from "./components/navbar";
 import NoMatch from "./components/nomatch";
 
@@ -25,7 +25,7 @@ class App extends Component {
               <Route exact path="/" component={HomePage} />
               <Route path="/shoppinglist" component={ShoppingListPage} />
               <Route path="/search/:term" component={SearchResultPage} />
-              <Route path="/recipe/:id" component={Recipe} />
+              <Route path="/recipe/:id" component={RecipeContainer} />
               <Route component={NoMatch} />
             </Switch>
           </div>

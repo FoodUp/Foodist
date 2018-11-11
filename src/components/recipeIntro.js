@@ -15,9 +15,9 @@ import { connect } from "react-redux";
 
 const RecipeIntro = props => {
   const imageStyle = {
-    backgroundImage: `url("/image/recipes/${props.image}")`
+    backgroundImage: `url(${props.image})`
   };
-  const tagList = props.tag.map(element => {
+  const tagList = props.tags.map(element => {
     return (
       <span className={tag} key={element}>
         {element}
@@ -75,12 +75,12 @@ const mapStateToProps = (state, { id }) => {
 };
 
 RecipeIntro.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  tag: PropTypes.arrayOf(PropTypes.string).isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   time: PropTypes.shape({
-    amount: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired,
     unit: PropTypes.string.isRequired
   }).isRequired,
   person: PropTypes.number,

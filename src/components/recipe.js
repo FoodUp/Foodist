@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 import {
   detailDiv,
   stepsDiv,
@@ -10,6 +9,7 @@ import {
 } from "../style/components/recipe.css";
 import IngredientLine from "./ingredientLine";
 import RecipeIntro from "./recipeIntro";
+
 const Recipe = ({ recipeObj }) => {
   const { steps, ingredients, ...introObj } = recipeObj;
   const stepsContent = steps
@@ -20,7 +20,7 @@ const Recipe = ({ recipeObj }) => {
               <span className={title}> Step {i + 1}</span>
               <div className={separator} />
             </div>
-            <p>{e.description}</p>
+            <p>{e.text}</p>
           </div>
         );
       })
@@ -44,9 +44,5 @@ const Recipe = ({ recipeObj }) => {
     </div>
   );
 };
-const mapStateToProps = (state, ownProps) => {
-  return {
-    recipeObj: state.items[ownProps.match.params.id]
-  };
-};
-export default connect(mapStateToProps)(Recipe);
+
+export default Recipe;
