@@ -19,7 +19,10 @@ const receiveItems = response => ({
 
 export const fetchItems = query => dispatch => {
   dispatch(requestItems(query));
-  return api.fetchItems().then(response => receiveItems(response));
+  return api
+    .fetchItems()
+    .then(receiveItems)
+    .then(dispatch);
 };
 
 export function searchItem(searchTerm) {

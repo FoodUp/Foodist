@@ -58,12 +58,12 @@ const mapStateToProps = (state, { item }) => {
 };
 RecipeItem.propTypes = {
   item: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     time: PropTypes.shape({
-      amount: PropTypes.string.isRequired,
+      amount: PropTypes.number.isRequired,
       unit: PropTypes.string.isRequired
     })
   }),

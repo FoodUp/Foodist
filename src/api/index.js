@@ -1,7 +1,7 @@
 const API_URL = "http://localhost:3001/recipes";
 
 export const fetchItems = () => {
-  return fecth(API_URL, {
+  return fetch(API_URL, {
     method: "GET",
     headers: {
       accept: "application/json"
@@ -10,7 +10,7 @@ export const fetchItems = () => {
 };
 
 export const fetchItemById = id => {
-  return fecth(`${API_URL}/${id}`, {
+  return fetch(`${API_URL}/${id}`, {
     method: "GET",
     headers: {
       accept: "application/json"

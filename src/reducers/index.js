@@ -279,6 +279,12 @@ import {
 //   }
 // };
 
+const arrayToIdMap = arr => {
+  return arr.reduce((a, c) => {
+    a[c._id] = Object.assign({ id: c._id }, c);
+    return a;
+  }, {});
+};
 const addedRecipesReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_BASKET:
@@ -311,7 +317,7 @@ const itemsReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_ITEMS:
       console.log(action.payload);
-      return action.payload;
+      return arrayToIdMap(action.payload);
     default:
       return state;
   }
