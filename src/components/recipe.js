@@ -2,8 +2,9 @@ import React from "react";
 import {
   detailDiv,
   stepsDiv,
+  stepItem,
   list,
-  flex,
+  titleDiv,
   separator,
   title
 } from "../style/components/recipe.css";
@@ -15,13 +16,13 @@ const Recipe = ({ recipeObj }) => {
   const stepsContent = steps
     ? steps.map((e, i) => {
         return (
-          <div key={i}>
-            <div className={flex}>
+          <li key={i} className={stepItem}>
+            <div className={titleDiv}>
               <span className={title}> Step {i + 1}</span>
               <div className={separator} />
             </div>
             <p>{e.text}</p>
-          </div>
+          </li>
         );
       })
     : "";
@@ -35,11 +36,11 @@ const Recipe = ({ recipeObj }) => {
     <div className="container">
       <RecipeIntro {...introObj} />
       <div className={detailDiv}>
-        <div className={stepsDiv}>{stepsContent}</div>
         <div className={list}>
           <div className={title}>Ingredients </div>
           <ul>{ingredientList}</ul>
         </div>
+        <ul className={stepsDiv}>{stepsContent}</ul>
       </div>
     </div>
   );

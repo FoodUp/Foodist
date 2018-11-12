@@ -10,5 +10,5 @@
 @value mobile: only screen and (max-width: 767px);
 @value tablet: only screen and (min-width: 768px) and (max-width: 1023px);
 @value desktop: only screen and (min-width: 1024px);
-@value deskTab: only screen and (min-width: 769px);
+@value deskTab: only screen and (min-width: 768px);
 @value tabMobile: only screen and (max-width: 1023px);

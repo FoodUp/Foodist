@@ -1,100 +1,60 @@
-@value (sliver, grey, cloud, dark, primary) from "../shared/varaible.css";
-.img {
-  height: 500px;
-  width: 60%;
-  background-size: cover;
-  background-position: center;
+@value (sliver, grey, cloud, dark, primary, mobile, deskTab) from "../shared/varaible.css";
+@media deskTab {
+    .detailDiv {
+        display: flex;
+        margin: 0 20px;
+    }
+    .stepsDiv {
+        order: 1;
+        width: 65%;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    .list {
+        order: 2;
+        box-sizing: border-box;
+        width: 35%;
+        padding: 30px;
+    }
 }
 
-.intro {
-  width: 40%;
-  padding: 0 24px;
-  box-sizing: border-box;
+@media mobile {
+    .detailDiv {
+        margin: 0 10px;
+    }
+    .list {
+        margin-bottom: 20px;
+    }
 }
 
-.introDiv {
-  display: flex;
-  margin: 0 20px;
-  border-radius: 8px;
-  border: 1px solid sliver;
-  overflow: hidden;
-}
-
-.number {
-  color: sliver;
-  display: flex;
-}
-
-.number > span {
-  padding-right: 10px;
-}
-
-.number > span:last-of-type {
-  margin-left: auto;
-}
-
-.tag {
-  border: cloud solid 1px;
-  border-radius: 3px;
-  padding: 10px 15px;
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.tag:hover {
-  border: grey solid 1px;
-}
-
-.detailDiv {
-  display: flex;
-  margin: 0 20px;
-}
-
-.stepsDiv {
-  width: 70%;
-  padding: 40px 30px;
-  box-sizing: border-box;
-}
-
-.list {
-  box-sizing: border-box;
-  width: 30%;
-  padding: 40px 30px;
+.stepItem {
+    margin-bottom: 20px;
 }
 
 .list ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .list li {
-  cursor: pointer;
-  line-height: 30px;
+    cursor: pointer;
+    line-height: 30px;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.titleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .separator {
-  width: calc(100% - 70px);
-  height: 1px;
-  background-color: sliver;
-}
-
-.basket {
-  composes: basket from "../shared/icon.css";
-  cursor: pointer;
-}
-
-.addedBasket {
-  composes: basket;
-  color: primary;
+    width: calc(100% - 70px);
+    height: 1px;
+    background-color: sliver;
 }

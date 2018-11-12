@@ -6,7 +6,9 @@ export const fetchItems = () => {
     headers: {
       accept: "application/json"
     }
-  }).then(res => res.json());
+  })
+    .then(res => res.json())
+    .catch(err => err);
 };
 
 export const fetchItemById = id => {

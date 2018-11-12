@@ -1,32 +1,54 @@
-.nav{
-    display: flex;
-    padding: 16px 24px;
+@value (primary, sliver, deskTab, mobile) from "../shared/varaible.css";
+@media deskTab {
+    .nav {
+        display: flex;
+        padding: 16px 24px;
+    }
+    .nav>div,
+    .nav>a {
+        margin: 0 16px;
+    }
 }
-.nav>div,.nav>a{
-    margin: 0 16px;
+
+@media mobile {
+    .nav {
+        display: flex;
+        padding: 10px 0;
+    }
+    .nav>div,
+    .nav>a {
+        margin: 0 8px;
+    }
+}
+
+.nav>div,
+.nav>a {
     display: flex;
     align-items: center;
     flex: 1 1 auto;
 }
-@value primary, sliver from "../shared/varaible.css";
 
-.logo{
-    composes: logo from '../shared/icon.css';
+.logo {
+    composes: logo from "../shared/icon.css";
     font-size: 36px;
     color: primary;
 }
-.chef{
-    composes: chef from '../shared/icon.css';
+
+.chef {
+    composes: chef from "../shared/icon.css";
     color: sliver;
 }
-.basketIcon{
-    composes: basket from '../shared/icon.css';
+
+.basketIcon {
+    composes: basket from "../shared/icon.css";
     color: sliver;
 }
-.basket{
+
+.basket {
     position: relative;
 }
-.basket>.quantity{
+
+.basket>.quantity {
     position: absolute;
     background: primary;
     color: #fff;
@@ -40,8 +62,8 @@
     padding-left: 8px;
     padding-top: 3px;
     font-size: 14px;
-
 }
-.logoLink{
+
+.logoLink {
     text-decoration: none;
 }

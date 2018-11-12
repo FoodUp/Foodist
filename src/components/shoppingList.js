@@ -26,7 +26,7 @@ const ShoppingListPage = ({ addedRecipesArray }) => {
       ""
     );
     const imgStyle = {
-      backgroundImage: `url("/image/recipes/${recipeObj.image}")`
+      backgroundImage: `url("${recipeObj.image}")`
     };
     return (
       <li key={recipeObj.id} className={slItem}>

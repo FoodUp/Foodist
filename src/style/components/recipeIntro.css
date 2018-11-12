@@ -1,0 +1,90 @@
+@value (sliver, cloud, primary, mobile, deskTab) from "../shared/varaible.css";
+@media mobile {
+    .intro {
+        padding: 14px 10px;
+        box-sizing: border-box;
+    }
+    .img {
+        padding-bottom: 70%;
+    }
+    .titleDiv {
+        padding: 5px 10px;
+    }
+    .tag {
+        padding: 5px 10px;
+        border: solid sliver 1px;
+    }
+}
+
+@media deskTab {
+    .introDiv {
+        position: relative;
+        display: flex;
+        margin: 0 20px;
+        border-radius: 8px;
+        border: 1px solid sliver;
+        overflow: hidden;
+    }
+    .titleDiv {
+        border-bottom: 1px solid sliver;
+        width: calc(35% - 48px);
+        position: absolute;
+        left: calc(65% + 24px);
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    .intro {
+        margin-top: 60px;
+        width: 35%;
+        padding: 14px 24px;
+        box-sizing: border-box;
+    }
+    .img {
+        width: 65%;
+        padding-bottom: 40%;
+    }
+    .tag {
+        padding: 10px 15px;
+        border: cloud solid 1px;
+    }
+    .tag:hover {
+        border: grey solid 1px;
+    }
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+}
+
+.number {
+    color: sliver;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.tag {
+    margin-top: 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.number>span {
+    padding-right: 10px;
+}
+
+.number>span:last-of-type {
+    margin-left: auto;
+}
+
+.basket {
+    composes: basket from "../shared/icon.css";
+    cursor: pointer;
+}
+
+.addedBasket {
+    composes: basket;
+    color: primary;
+}

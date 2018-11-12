@@ -25,13 +25,14 @@ const addedRecipesReducer = (state = [], action) => {
         }
       ];
     case UPDATE_BASKET:
-      return state.map(addedRecipe =>
-        addedRecipe.id == action.id
-          ? {
-              ...addedRecipe,
-              person: action.person
-            }
-          : addedRecipe
+      return state.map(
+        addedRecipe =>
+          addedRecipe.id == action.id
+            ? {
+                ...addedRecipe,
+                person: action.person
+              }
+            : addedRecipe
       );
     case REMOVE_BASKET:
       return state.filter(addedRecipe => {
@@ -50,10 +51,8 @@ function upsertItem(item, items) {
 const itemsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ITEMS:
-      console.log(action.payload);
       return arrayToIdMap(action.payload);
     case RECEIVE_ITEM:
-      console.log(action.payload);
       return upsertItem(action.payload, state);
     default:
       return state;

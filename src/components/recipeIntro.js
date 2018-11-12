@@ -2,6 +2,7 @@ import React from "react";
 import { addToBasket, removeBasket } from "../actions/index";
 import PropTypes from "prop-types";
 import {
+  titleDiv,
   img,
   intro,
   introDiv,
@@ -9,7 +10,7 @@ import {
   tag,
   basket,
   addedBasket
-} from "../style/components/recipe.css";
+} from "../style/components/recipeIntro.css";
 import { timer, people } from "../style/shared/icon.css";
 import { connect } from "react-redux";
 
@@ -34,9 +35,11 @@ const RecipeIntro = props => {
   const despPara = props.description ? <p> {props.description}</p> : "";
   return (
     <div className={introDiv}>
+      <div className={titleDiv}>
+        <h2> {props.name} </h2>
+      </div>
       <div className={img} style={imageStyle} />
       <div className={intro}>
-        <h1> {props.name} </h1>
         <div className={number}>
           <span>
             <i className={timer} />
