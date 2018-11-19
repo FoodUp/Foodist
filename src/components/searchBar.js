@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { searchItem } from "../actions";
-import { bindActionCreators } from "redux";
 import { withRouter } from "react-router";
 import { d0, search, cross } from "../style/components/searchBar.css";
 
 //container component
 class SearchBar extends Component {
   constructor(props) {
+    console.log(props.match.params);
     super(props);
     //Controlled Components : form element's value is maintained and updated with setState()
     //Uncontrolled Components : use ref to get forms values instead of writing event handler for each elements
-    this.state = { term: props.term };
+    this.state = { term: this.props.term };
     this.textInput = React.createRef();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,7 +31,6 @@ class SearchBar extends Component {
   handleSubmit(event) {
     event.preventDefault();
     if (this.state.term.trim() !== "") {
-      //this.props.searchItem(this.state.term);
       this.textInput.current.blur();
       this.props.history.push(`/search/${this.state.term}`);
     }
@@ -62,17 +60,5 @@ class SearchBar extends Component {
 const mapStateToProp = state => {
   return { term: state.searchTerm };
 };
-const mapDispatchToProps = dispatch => {
-  // return {
-  //   searchItem: (term) =>
-  //     dispatch(searchItem(term))
-  // }
-  return bindActionCreators({ searchItem }, dispatch);
-};
 
-export default withRouter(
-  connect(
-    mapStateToProp,
-    mapDispatchToProps
-  )(SearchBar)
-);
+export default withRouter(connect(mapStateToProp)(SearchBar));

@@ -7,23 +7,19 @@ import {
   intro,
   introDiv,
   number,
-  tag,
   basket,
   addedBasket
 } from "../style/components/recipeIntro.css";
 import { timer, people } from "../style/shared/icon.css";
 import { connect } from "react-redux";
+import RecipeTagLink from "./RecipeTagLink";
 
 const RecipeIntro = props => {
   const imageStyle = {
     backgroundImage: `url(${props.image})`
   };
   const tagList = props.tags.map(element => {
-    return (
-      <span className={tag} key={element}>
-        {element}
-      </span>
-    );
+    return <RecipeTagLink key={element}>{element}</RecipeTagLink>;
   });
   const personSpan = props.person ? (
     <span>
@@ -59,7 +55,7 @@ const RecipeIntro = props => {
         </div>
         {despPara}
         <div>
-          <span className={tag}> {props.type}</span>
+          {props.type ? <RecipeTagLink>{props.type}</RecipeTagLink> : ""}
           {tagList}
         </div>
       </div>

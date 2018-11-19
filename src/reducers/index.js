@@ -1,6 +1,6 @@
+/* eslint-disable no-case-declarations */
 import { combineReducers } from "redux";
 import {
-  SEARCH_ITEM,
   ADD_BASKET,
   UPDATE_BASKET,
   REMOVE_BASKET,
@@ -9,12 +9,6 @@ import {
   RECEIVE_ITEM
 } from "../actions/index";
 
-const arrayToIdMap = arr => {
-  return arr.reduce((a, c) => {
-    a[c._id] = Object.assign({ id: c._id }, c);
-    return a;
-  }, {});
-};
 const addedRecipesReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_BASKET:
@@ -51,18 +45,43 @@ function upsertItem(item, items) {
 const itemsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ITEMS:
-      return arrayToIdMap(action.payload);
+      const nextState = { ...state };
+      action.payload.forEach(e => {
+        nextState[e._id] = Object.assign({ id: e._id }, e);
+      });
+      return nextState;
     case RECEIVE_ITEM:
       return upsertItem(action.payload, state);
     default:
       return state;
   }
 };
-
+const idsReducer = (state = [], action) => {
+  if (action.query !== "") {
+    return state;
+  }
+  switch (action.type) {
+    case RECEIVE_ITEMS:
+      return action.payload.map(e => e._id);
+    default:
+      return state;
+  }
+};
+const searchedIdsReducer = (state = [], action) => {
+  if (action.query == "") {
+    return state;
+  }
+  switch (action.type) {
+    case RECEIVE_ITEMS:
+      return action.payload.map(e => e._id);
+    default:
+      return state;
+  }
+};
 const searchTermReducer = (state = "", action) => {
   switch (action.type) {
-    case SEARCH_ITEM:
-      return action.term;
+    case REQUEST_ITEMS:
+      return action.query;
     default:
       return state;
   }
@@ -81,8 +100,27 @@ const isFetching = (state = true, action) => {
 const rootReducer = combineReducers({
   addedRecipes: addedRecipesReducer,
   items: itemsReducer,
+  ids: idsReducer,
+  searchedIds: searchedIdsReducer,
   searchTerm: searchTermReducer,
   isFetching
 });
 
 export default rootReducer;
+
+export const getAllItems = state => {
+  return state.ids.map(id => state.items[id]);
+};
+export const getSearchItems = state => {
+  return state.searchedIds.map(id => state.items[id]);
+};
+export const getIsFetching = state => {
+  return state.isFetching;
+};
+export const getIsInBasket = (state, id) => {
+  return state.addedRecipes.findIndex(e => {
+    return e.id === id;
+  }) > -1
+    ? true
+    : false;
+};

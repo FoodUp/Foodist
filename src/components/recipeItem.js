@@ -16,11 +16,12 @@ import {
 } from "../style/components/recipeItem.css";
 import { basket } from "../style/shared/icon.css";
 import ProgressiveImage from "./progressiveImage";
+import { getIsInBasket } from "../reducers/index";
 
 const RecipeItem = ({ inBasket, item, addToBasket, removeBasket }) => {
   return (
     <div className={card}>
-      <Link to={`/recipe/${item.id}`}>
+      <Link to={`/recipe/${item._id}`}>
         <div className={imgWrapper}>
           <ProgressiveImage image={item.image} color={item.color} />
           <div className={shadow} />
@@ -35,7 +36,7 @@ const RecipeItem = ({ inBasket, item, addToBasket, removeBasket }) => {
           <div
             className={basket}
             onClick={() =>
-              inBasket ? removeBasket(item.id) : addToBasket(item.id)
+              inBasket ? removeBasket(item._id) : addToBasket(item._id)
             }
           />
         </div>
@@ -45,17 +46,12 @@ const RecipeItem = ({ inBasket, item, addToBasket, removeBasket }) => {
 };
 const mapStateToProps = (state, { item }) => {
   return {
-    inBasket:
-      state.addedRecipes.findIndex(e => {
-        return e.id === item.id;
-      }) > -1
-        ? true
-        : false
+    inBasket: getIsInBasket(state, item._id)
   };
 };
 RecipeItem.propTypes = {
   item: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

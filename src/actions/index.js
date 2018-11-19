@@ -1,6 +1,5 @@
 import * as api from "../api";
 
-export const SEARCH_ITEM = "search_item";
 export const ADD_BASKET = "add_basket";
 export const UPDATE_BASKET = "update_basket";
 export const REMOVE_BASKET = "remove_basket";
@@ -13,8 +12,9 @@ const requestItems = query => ({
   query
 });
 
-const receiveItems = response => ({
+const receiveItems = (response, query) => ({
   type: RECEIVE_ITEMS,
+  query,
   payload: response
 });
 
@@ -25,10 +25,17 @@ const receiveItem = item => ({
 
 export const fetchItems = query => dispatch => {
   dispatch(requestItems(query));
-  return api
-    .fetchItems()
-    .then(receiveItems)
-    .then(dispatch);
+  if (query) {
+    return api
+      .searchItem(query)
+      .then(response => receiveItems(response, query))
+      .then(dispatch);
+  } else {
+    return api
+      .fetchItems()
+      .then(response => receiveItems(response, query))
+      .then(dispatch);
+  }
 };
 
 export const fetchItemById = id => dispatch => {
@@ -41,12 +48,6 @@ export const fetchItemById = id => dispatch => {
     });
 };
 
-export function searchItem(searchTerm) {
-  return {
-    type: SEARCH_ITEM,
-    term: searchTerm
-  };
-}
 export function addToBasket(id) {
   return {
     type: ADD_BASKET,

@@ -1,46 +1,37 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { searchItem } from "../actions/index";
 import ItemsList from "./itemsList";
-import _ from "lodash";
+import { fetchItems } from "../actions";
+import { getSearchItems } from "../reducers";
 
 class SearchResultPage extends Component {
   componentDidMount() {
-    this.props.searchItem(this.props.urlTerm);
+    console.log(this.props.urlTerm);
+    this.props.fetchItems(this.props.urlTerm);
   }
   render() {
     return (
       <div className="container">
-        <ItemsList items={this.props.searchResultItems} />
+        <ItemsList items={this.props.items} />
       </div>
     );
   }
 }
 
-function searchInObject(obj, term) {
-  let filtered = _.filter(obj, function(element) {
-    //search by name anf type
-    return (
-      element.name.toLowerCase().indexOf(term.toLowerCase()) > -1 ||
-      element.type.toLowerCase().indexOf(term.toLowerCase()) > -1
-    );
-  });
-  return filtered;
-}
-
 function mapStateToProps(state, ownProps) {
   //TODO: transfer url param to meaningful search term , like 'sea-food' to 'sea food'
-  let searchResultItems = searchInObject(
-    state.items,
-    ownProps.match.params.term
-  );
   return {
     urlTerm: ownProps.match.params.term,
-    searchResultItems: searchResultItems
+    items: getSearchItems(state)
+  };
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    fetchItems: query => dispatch(fetchItems(query))
   };
 }
 
 export default connect(
   mapStateToProps,
-  { searchItem }
+  mapDispatchToProps
 )(SearchResultPage);
