@@ -1,4 +1,4 @@
-@value (sliver, cloud, primary, mobile, deskTab) from "../shared/varaible.css";
+@value (sliver, cloud, primary, mobile, deskTab) from "../shared/variable.css";
 @media mobile {
     .intro {
         padding: 14px 10px;
@@ -30,12 +30,12 @@
         width: calc(35% - 48px);
         position: absolute;
         left: calc(65% + 24px);
-        height: 60px;
+        height: 80px;
         display: flex;
         align-items: center;
     }
     .intro {
-        margin-top: 60px;
+        margin-top: 80px;
         width: 35%;
         padding: 14px 24px;
         box-sizing: border-box;
@@ -71,11 +71,11 @@
     display: inline-block;
 }
 
-.number>span {
+.number > span {
     padding-right: 10px;
 }
 
-.number>span:last-of-type {
+.number > span:last-of-type {
     margin-left: auto;
 }
 

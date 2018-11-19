@@ -1,6 +1,6 @@
-@value cloud,sliver from "../shared/varaible.css";
+@value cloud,sliver from "../shared/variable.css";
 
-.d0{
+.d0 {
     width: 100%;
     border-radius: 8px;
     height: 40px;
@@ -12,26 +12,26 @@
     background-color: #fff;
     border: 1px solid sliver;
 }
-.d0 button{
+.d0 button {
     background: transparent;
-    border: 0; 
+    border: 0;
     outline: 0;
 }
-.d0 input{
+.d0 input {
     background: transparent;
     border: 0;
     outline: 0;
     width: 100%;
 }
-.search{
+.search {
     color: sliver;
     font-size: 16px;
-    composes: search from '../shared/icon.css';
-    padding-left: 12px;    
+    composes: search from "../shared/icon.css";
+    padding-left: 12px;
 }
-.cross{
+.cross {
     color: sliver;
     font-size: 14px;
-    composes: cross from '../shared/icon.css';
-    padding-right: 10px; 
+    composes: cross from "../shared/icon.css";
+    padding-right: 10px;
 }

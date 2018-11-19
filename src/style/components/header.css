@@ -1,11 +1,11 @@
-@value (primary, sliver, deskTab, mobile) from "../shared/varaible.css";
+@value (primary, sliver, deskTab, mobile) from "../shared/variable.css";
 @media deskTab {
     .nav {
         display: flex;
         padding: 16px 24px;
     }
-    .nav>div,
-    .nav>a {
+    .nav > div,
+    .nav > a {
         margin: 0 16px;
     }
 }
@@ -15,14 +15,14 @@
         display: flex;
         padding: 10px 0;
     }
-    .nav>div,
-    .nav>a {
+    .nav > div,
+    .nav > a {
         margin: 0 8px;
     }
 }
 
-.nav>div,
-.nav>a {
+.nav > div,
+.nav > a {
     display: flex;
     align-items: center;
     flex: 1 1 auto;
@@ -48,7 +48,7 @@
     position: relative;
 }
 
-.basket>.quantity {
+.basket > .quantity {
     position: absolute;
     background: primary;
     color: #fff;

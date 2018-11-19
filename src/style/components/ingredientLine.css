@@ -1,5 +1,5 @@
-@value sliver from "../shared/varaible.css";
-.box{
+@value sliver from "../shared/variable.css";
+.box {
     display: inline-block;
     height: 12px;
     width: 12px;
@@ -8,9 +8,9 @@
     margin-right: 10px;
     position: relative;
 }
-.box:after{
+.box:after {
     position: absolute;
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -23,10 +23,10 @@
     transition: all 0.2s ease-in-out;
     opacity: 0;
 }
-.selectedBox{
-    composes: box; 
+.selectedBox {
+    composes: box;
 }
-.selectedBox:after{
+.selectedBox:after {
     opacity: 1;
     transform: scale(1);
 }

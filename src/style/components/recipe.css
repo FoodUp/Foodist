@@ -1,4 +1,4 @@
-@value (sliver, grey, cloud, dark, primary, mobile, deskTab) from "../shared/varaible.css";
+@value (sliver, grey, cloud, dark, primary, mobile, deskTab) from "../shared/variable.css";
 @media deskTab {
     .detailDiv {
         display: flex;

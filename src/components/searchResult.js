@@ -6,7 +6,6 @@ import { getSearchItems } from "../reducers";
 
 class SearchResultPage extends Component {
   componentDidMount() {
-    console.log(this.props.urlTerm);
     this.props.fetchItems(this.props.urlTerm);
   }
   render() {

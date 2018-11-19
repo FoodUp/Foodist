@@ -1,4 +1,4 @@
-@value (sliver, mobile) from "../shared/varaible.css";
+@value (sliver, mobile) from "../shared/variable.css";
 .sl {
     font-size: 24px;
 }
@@ -21,7 +21,7 @@
     margin-left: -15px;
 }
 
-.flex>div {
+.flex > div {
     margin: 0 15px;
 }
 

@@ -6,7 +6,6 @@ import { d0, search, cross } from "../style/components/searchBar.css";
 //container component
 class SearchBar extends Component {
   constructor(props) {
-    console.log(props.match.params);
     super(props);
     //Controlled Components : form element's value is maintained and updated with setState()
     //Uncontrolled Components : use ref to get forms values instead of writing event handler for each elements

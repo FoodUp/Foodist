@@ -1,4 +1,4 @@
-@value (tablet, mobile, desktop, tabMobile) from "./varaible.css";
+@value (tablet, mobile, desktop, tabMobile) from "./variable.css";
 body {
     font-family: "Titillium Web", sans-serif;
 }
