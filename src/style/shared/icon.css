@@ -1,10 +1,17 @@
 .time,
+.timer,
 .cross,
 .people,
 .search,
 .basket,
 .logo,
-.chef {
+.list,
+.pacman,
+.spoon-knife,
+.happy,
+.happy2,
+.tongue,
+.tongue2 .chef {
     font-family: "icomoon" !important;
     speak: none;
     font-style: normal;
