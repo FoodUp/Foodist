@@ -42,7 +42,7 @@
     }
     .img {
         width: 65%;
-        padding-bottom: 40%;
+        padding-bottom: 50%;
     }
     .tag {
         padding: 10px 15px;
@@ -71,11 +71,11 @@
     display: inline-block;
 }
 
-.number > span {
+.number>span {
     padding-right: 10px;
 }
 
-.number > span:last-of-type {
+.number>span:last-of-type {
     margin-left: auto;
 }
 
