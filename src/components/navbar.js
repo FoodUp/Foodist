@@ -25,7 +25,7 @@ const NavBar = ({ count }) => {
     );
   return (
     <nav className={nav}>
-      <Link to="/" className={logoLink}>
+      <Link to={process.env.PUBLIC_URL} className={logoLink}>
         <div className={`${logo}`} />
       </Link>
       <SearchBar />
