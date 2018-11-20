@@ -1,5 +1,4 @@
-//const API_URL = "http://142.93.224.169:3000/recipes";
-const API_URL = "http://localhost:3001/recipes";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const fetchItems = () => {
   return fetch(API_URL, {
