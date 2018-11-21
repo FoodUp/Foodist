@@ -65,17 +65,18 @@
 }
 
 .tag {
+    cursor: pointer;
     margin-top: 15px;
     border-radius: 3px;
     margin-right: 10px;
     display: inline-block;
 }
 
-.number>span {
+.number > span {
     padding-right: 10px;
 }
 
-.number>span:last-of-type {
+.number > span:last-of-type {
     margin-left: auto;
 }
 
