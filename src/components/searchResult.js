@@ -11,8 +11,6 @@ class SearchResultPage extends Component {
   render() {
     return (
       <div className="container">
-        <h4>Inspiration</h4>
-
         <ItemsList items={this.props.items} />
       </div>
     );

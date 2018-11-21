@@ -2,7 +2,7 @@
 @value cloud: #F2F2F2;
 @value grey: #979797;
 @value sliver: #bdc3c7;
-@value dark: #2c3e50;
+@value dark: #484848;
 /* -------------screen size---------- */
 
 @value xs: only screen and (max-width: 375px);

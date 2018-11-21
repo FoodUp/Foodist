@@ -1,17 +1,38 @@
 import React from "react";
-import { thumb } from "../style/components/ideasList.css";
+import { Link } from "react-router-dom";
+import {
+  thumb,
+  flex,
+  thumbName,
+  thumbImg,
+  thumbList,
+  title
+} from "../style/components/ideasList.css";
 
 class IdeasList extends React.Component {
   state = {
-    ideas: ["avocado", "noddle", "healty", "dessert"]
+    ideas: ["Avocado", "Chinese", "Healthy", "Dessert"]
   };
   render() {
-    return this.state.ideas.map((idea, idx) => (
-      <div key={idx} className={thumb}>
-        <img src={require("../asset/healthy.jpg")} alt="" height="100" />
-        <div>{idea}</div>
+    const list = this.state.ideas.map((idea, idx) => {
+      const style = {
+        backgroundImage: `url(./asset/${idea.toLowerCase()}.jpg)`
+      };
+      return (
+        <Link key={idx} className={thumb} to={`/search/${idea.toLowerCase()}`}>
+          <div className={flex}>
+            <div className={thumbImg} style={style} />
+            <div className={thumbName}>{idea}</div>
+          </div>
+        </Link>
+      );
+    });
+    return (
+      <div>
+        <h3 className={title}>Inspirations</h3>
+        <div className={thumbList}>{list}</div>
       </div>
-    ));
+    );
   }
 }
 

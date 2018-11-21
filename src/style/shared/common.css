@@ -1,9 +1,10 @@
-@value (tablet, mobile, desktop, tabMobile) from "./variable.css";
+@value (tablet, mobile, desktop, tabMobile, dark) from "./variable.css";
 body {
     font-family: "Titillium Web", sans-serif;
 }
 
 a {
+    color: dark;
     text-decoration: none;
 }
 
